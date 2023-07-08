@@ -1,0 +1,72 @@
+import yhills from "../Logo/yhills.png"
+import etabs from "../Logo/etabs.png"
+import bentley from "../Logo/bentley.png"
+import designdot from "../Logo/designdot.png"
+import ark from "../Logo/ark.png"
+import madeeasy from "../Logo/madeeasy.png"
+import yocket from "../Logo/yocket.png"
+import menterme from "../Logo/menterme.png"
+
+export const workshop = [
+
+    {
+        name: "Designing Software",
+        title: "ETABS",
+        content: "An online workshop on ETABS, a structural analysis and design software was also conducted with the assistance of infrastructure society for the students of civil engineering. \n \n Throughout the workshop, participants were engaged through interactive discussions, examples, and exercises. This not only helped participants to better understand the concepts, but also made the workshop more enjoyable and memorable.",
+        image: etabs
+    
+    },
+    {
+        name: "STAAD Pro Workshop",
+        title: "Bentley",
+        content: "The four-day workshop is initiated by Infrastructure in collaboration with a bunch of other NITs and IITs, (some of them were IIT Roorkee, NIT Tiruchirapalli, NIT Silchar, NIT Hamirpur, MANIT Bhopal) and was conducted in online mode. It was organized by Shape My Skills Technologies, conceptualized by top industry professionals. The Bentley certification acted as a cherry on the cake.",
+        image: bentley
+    
+    },
+    {
+        name: "ANSYS Workshop",
+        title: "ARK Infosolutions",
+        content: "Infrastructure also had its part to play in the dispensation along with ARK Infosolutions Pvt Ltd. for the conduction of the workshop on ANSYS which is an engineering simulation works and 3-D design software. This workshop was aimed at showcasing the capabilities of ANSYS.",
+        image: ark
+    
+    },
+    {
+        name: "Photoshop Workshop",
+        title: "Designdotink",
+        content: "Infrastructure society conducted a mock photoshop workshop with the collaboration of Desgindotnik by Ar Anushka Goyal. It helped students with the basics of photoshop and also taught students in what way they can proffer an architecture plan in photoshop. This workshop glorifies students' skills and assists them to develop their curiosity in software skills.",
+        image: designdot
+    
+    },
+    {
+        name: "Webinar on Foreign Studies",
+        title: "Yocket",
+        content: "Infrastructure society provides resources to students regarding their future planning which help them to take better career choices.We organised a webinar in collaboration with yocket app,which is India's largest study abroad consultancy  community comprising of 550000+ aspirants,with best among the business  interacting with the students and clearing all their queries.",
+        image: yocket
+
+    },
+    {
+        name: "Webinar on MS and Career in Foreign",
+        title: "MentrMe",
+        content: "MentR-Me is a P2P Mentorship Marketplace where you can connect with Alumni and Industry Experts,and  an On-Demand Mentorship to get into the World's Best Colleges. We have  collaborated with it to make your study abroad dreams come true with us. We conducted webinar on career guidance and job opportunities after graduation in collaboration with mentr me.",
+        image: menterme
+    },
+
+]
+
+export const webinar = [
+    {
+        name: "AI & Data Science",
+        title: "YHills",
+        content: "The groundbreaking webinar conducted by YHills in collaboration with the Infrastructure Society of NIT Kurukshetra aimed at enlightening students about the exciting prospects in the fields of Artificial Intelligence (AI) and Data Science(DS) . This highly informative session not only delved into the future perspectives of placements and online internships but also provided invaluable guidance to the eager participants, paving the way for their success in these burgeoning domains. This empowering webinar will undoubtedly serve as a catalyst for the success of many aspiring AI/DS professionals, setting them on the path to a bright future.",
+        image: yhills
+    },
+]
+
+export const seminar = [
+    {
+        name : "Guaidance And Learning",
+        title: "MadeEasy",
+        content : "Infrastructure also organised a Seminar in collaboration with Made Easy which is a dominant player in the field of providing guidance, mentorship and  coaching for the Civil Services Examination, GATE and the Engineering  Services Examination. The Seminar had its focus on in and out of GATE and  other competitive exams; various career opportunities, dos and don'ts to  become topper, why and why not approach, many arrows in one quiver, art of  making effective notes, how to face different phases of recruitment (Written  test / GD/ Interview).",
+        image: madeeasy
+    },
+]
