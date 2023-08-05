@@ -102,7 +102,7 @@ export default function Navbar() {
                     <div className="flex justify-start lg:w-0 lg:flex-1">
                         <a href="/" className='flex justify-start'>
                             <img
-                                className="h-10 w-auto sm:h-10"
+                                className="h-[70px] w-auto sm:h-[70px]"
                                 src={require('../images/white-logo.png')}
                                 alt=""
                             />
@@ -174,11 +174,19 @@ export default function Navbar() {
                         <a href="/gallery" className="text-base font-medium text-gray-500 hover:text-gray-900">
                             Gallery
                         </a>
-                        <a href="/contact-us" className="text-base font-medium text-gray-500 hover:text-gray-900">
-                            Contact us
-                        </a>
 
-                        <Popover className="relative">
+                       {more.map((item) => (
+                                                        <a
+                                                            key={item.name}
+                                                            href={item.href}
+                                                            className="text-base font-medium text-gray-500 hover:text-gray-900"
+                                                        >
+                                                                {item.name}
+                                                        </a>
+                                                    ))}
+                        
+
+                        {/* <Popover className="relative">
                             {({ open }) => (
                                 <>
                                     <Popover.Button
@@ -228,7 +236,10 @@ export default function Navbar() {
                                     </Transition>
                                 </>
                             )}
-                        </Popover>
+                        </Popover> */}
+                        <a href="/contact-us" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                            Contact us
+                        </a>
                     </Popover.Group>
                     <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                         <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
@@ -271,7 +282,7 @@ export default function Navbar() {
                                 <div>
                                     <a href="/">
                                         <img
-                                            className="h-10 w-auto sm:h-10"
+                                            className="h-[70px] w-auto sm:h-[70px]"
                                             src={require('../images/white-logo.png')}
                                             alt=""
                                         />

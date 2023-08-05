@@ -6,13 +6,13 @@ const Footer = () => {
             <div className="flex flex-col items-center justify-center">
                 <div>
                     <img
-                        className="h-10 w-auto sm:h-10"
+                        className="h-[100px] w-auto sm:h-[100px]"
                         src={require('../images/white-logo.png')}
                         alt=""
                     />
                 </div>
                 <div className="flex flex-wrap sm:gap-10 gap-8 items-center justify-center mt-8">
-                    <p className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800"><a target={'_blank'} href="/our-team#developers">Developers</a></p>
+                    <p className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800"><a target={'_blank'} href="/our-allies#developers">Developers</a></p>
                     <p className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800"><a target={'_blank'} href="https://forms.gle/WJcFN8gLYw7ALs7H9">Suggest for site</a></p>
                     <p className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800"><a target={'_blank'} href="/contact-us">Contact us</a></p>
                     <p className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800"><a target={'_blank'} href="/">Home</a></p>

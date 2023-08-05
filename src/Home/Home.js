@@ -1,4 +1,5 @@
 import React from 'react'
+import Teachers from '../Cards/Teachers'
 import About from '../Components/About'
 import Banner from '../Components/Banner'
 import Content from '../Components/Content'
@@ -27,6 +28,7 @@ export default function Home() {
             </div>
             <About />
             <Content />
+            <Teachers />
             <Motive />
         </div>
     )

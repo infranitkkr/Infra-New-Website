@@ -4,6 +4,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import React , {useEffect , useState} from 'react'
 import AboutUs from './Pages/AboutUs';
 import Banner from './Components/Banner';
 import ComingSoon from './Pages/ComingSoon';
@@ -16,10 +17,33 @@ import Navbar from './Components/Navbar';
 import Team from './Pages/Team';
 import Workshop from './Pages/Workshop';
 import Explore from './Pages/Explore';
+import logo from './images/white-logo2.png'
 
 function App() {
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulating a delay of 2 seconds for demonstration purposes
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+
+    // Clean up the timer when the component unmounts
+    return () => clearTimeout(timer);
+  }, []);
+  
   return (
-    <Router>
+    isLoading ? (
+      <div className="loader place-items-center grid justify-items-center align-middle sm:h-[100vh]  h-[90vh]">
+        <div>
+          <img src={logo} className="w-[40vw] sm:w-[20vw]" alt='logo'/>
+        </div>
+                
+      </div>
+    ) : (
+      // Render your actual website content here
+      <Router>
       <Navbar />
       {/* <Banner /> */}
       <Routes>
@@ -35,6 +59,8 @@ function App() {
       </Routes>
       <Footer />
     </Router>
+    )
+
   );
 }
 

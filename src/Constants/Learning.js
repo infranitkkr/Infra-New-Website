@@ -6,6 +6,22 @@ import ark from "../Logo/ark.png"
 import madeeasy from "../Logo/madeeasy.png"
 import yocket from "../Logo/yocket.png"
 import menterme from "../Logo/menterme.png"
+import ducat_logo from "../Logo/ducat_logo.png"
+import hd_chalak from "../gallery/Teachers/hd_chalak.jpg"
+import arun_goel from "../gallery/Teachers/arun_goel.jpg"
+
+export const teacher = [
+    {
+        name: "Arun Goel",
+        designation : "Head of Department",
+        image: arun_goel
+    },
+    {
+        name: "H.D. Chalak",
+        designation : "Faculty-In-Charge",
+        image: hd_chalak
+    },
+]
 
 export const workshop = [
 
@@ -28,6 +44,13 @@ export const workshop = [
         title: "ARK Infosolutions",
         content: "Infrastructure also had its part to play in the dispensation along with ARK Infosolutions Pvt Ltd. for the conduction of the workshop on ANSYS which is an engineering simulation works and 3-D design software. This workshop was aimed at showcasing the capabilities of ANSYS.",
         image: ark
+    
+    },
+    {
+        name: "Python Workshop",
+        title: "DUCAT",
+        content: "The impeccable and prodigious workshop conducted by DUCAT' Tech Wing in collaboration with Infrastructure Society, which is the technical society of civil engineering department at NIT Kurukshetra, was served as an opportunity to the attendees to hone and bolster their programming skills in one of the most renowned programming languages, Python. Python forms the ardent backbone and a firm foundation in the field of Data Science and is an elementary step to undertake the expedition in the vast and multifaceted field of Data Science. The workshop also laid emphasis on Machine Learning, Data Analysis, Data Manipulation and other topics alike. Though the entire dispensation to conduct was online but the recorded response was tremendous. Attendees were mentored about this field and were accorded with a path that would lead to a bright future.",
+        image: ducat_logo
     
     },
     {

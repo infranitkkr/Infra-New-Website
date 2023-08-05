@@ -10,7 +10,7 @@ const Learning_Card = ({ name, title, content, image }) => {
           <p className="text-xl md:text-2xl font-medium leading-normal text-gray-800">
             {name}, <strong>{title}</strong>
           </p>
-          <button onClick={() => setMenu(!menu)} className="ml-4 md:hidden">
+          <button onClick={(menu) => setMenu(!menu)} className="ml-4 md:hidden">
             <svg
               className={"transform " + (menu ? "rotate-0" : "rotate-180")}
               width="20"
