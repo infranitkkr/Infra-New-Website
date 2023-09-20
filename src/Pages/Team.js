@@ -25,7 +25,6 @@ function Team() {
             <TeamsCard name={"Pravesh Kumar"} post={"Joint Secretary"} image={fourth} insta= {"https://www.instagram.com/pravesh_kumar.001"} linkedin={"https://www.linkedin.com/in/prLiavesh-kumar-805160220"}/>
             <TeamsCard name={"Anushka Meena"} post={"Additional Secretary"} image={fifth} insta= {"https://www.instagram.com/Anushkaa.x__"} linkedin={"https://www.linkedin.com/in/anushka-meena-259168252"}/>
             <TeamsCard name={"Harshith Mediga"} post={"Technical Head"} image={sixth} insta= {"https://www.instagram.com/chinnuharshith3_"} linkedin={"https://www.linkedin.com/in/harshith-mediga-5704021ab"}/>
-
           </div>
         </div>
       </div>

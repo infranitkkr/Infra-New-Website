@@ -21,6 +21,7 @@ import {
 
 } from '@heroicons/react/outline';
 import { ChevronDownIcon, CubeTransparentIcon } from '@heroicons/react/solid'
+import { Link } from 'react-router-dom';
 
 const events = [
     {
@@ -100,13 +101,13 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
                     <div className="flex justify-start lg:w-0 lg:flex-1">
-                        <a href="/" className='flex justify-start'>
+                        <Link href="/" className='flex justify-start'>
                             <img
                                 className="h-[70px] w-auto sm:h-[70px]"
                                 src={require('../images/white-logo.png')}
                                 alt=""
                             />
-                        </a>
+                        </Link>
                     </div>
                     <div className="-mr-2 -my-2 md:hidden">
                         <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100">
@@ -116,9 +117,9 @@ export default function Navbar() {
                     </div>
                     {/* Navbar items */}
                     <Popover.Group as="nav" className="hidden md:flex space-x-10">
-                        <a href="/" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                        <Link href="/" className="text-base font-medium text-gray-500 hover:text-gray-900">
                             Home
-                        </a>
+                        </Link>
                         <Popover className="relative">
                             {({ open }) => (
                                 <>
@@ -151,7 +152,7 @@ export default function Navbar() {
                                             <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                                                 <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                                                     {events.map((item) => (
-                                                        <a
+                                                        <Link
                                                             key={item.name}
                                                             href={item.href}
                                                             className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
@@ -161,7 +162,7 @@ export default function Navbar() {
                                                                 <p className="text-base font-medium text-gray-900">{item.name}</p>
                                                                 <p className="mt-1 text-sm text-gray-500">{item.description}</p>
                                                             </div>
-                                                        </a>
+                                                        </Link>
                                                     ))}
                                                 </div>
                                             </div>
@@ -171,18 +172,18 @@ export default function Navbar() {
                             )}
                         </Popover>
 
-                        <a href="/gallery" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                        <Link href="/gallery" className="text-base font-medium text-gray-500 hover:text-gray-900">
                             Gallery
-                        </a>
+                        </Link>
 
                        {more.map((item) => (
-                                                        <a
+                                                        <Link
                                                             key={item.name}
                                                             href={item.href}
                                                             className="text-base font-medium text-gray-500 hover:text-gray-900"
                                                         >
                                                                 {item.name}
-                                                        </a>
+                                                        </Link>
                                                     ))}
                         
 
@@ -237,9 +238,9 @@ export default function Navbar() {
                                 </>
                             )}
                         </Popover> */}
-                        <a href="/contact-us" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                        <Link href="/contact-us" className="text-base font-medium text-gray-500 hover:text-gray-900">
                             Contact us
-                        </a>
+                        </Link>
                     </Popover.Group>
                     <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                         <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
@@ -280,13 +281,13 @@ export default function Navbar() {
                         <div className="pt-5 pb-6 px-5">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <a href="/">
+                                    <Link href="/">
                                         <img
                                             className="h-[70px] w-auto sm:h-[70px]"
                                             src={require('../images/white-logo.png')}
                                             alt=""
                                         />
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div className="-mr-2">
                                     <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100">
@@ -298,14 +299,14 @@ export default function Navbar() {
                             <div className="mt-6">
                                 <nav className="grid gap-y-8">
                                     {menu.map((item) => (
-                                        <a
+                                        <Link
                                             key={item.name}
                                             href={item.href}
                                             className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                                         >
                                             <item.icon className="flex-shrink-0 h-6 w-6 text-gray-800" aria-hidden="true" />
                                             <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
-                                        </a>
+                                        </Link>
                                     ))}
                                 </nav>
                             </div>
@@ -313,13 +314,13 @@ export default function Navbar() {
                         <div className="py-6 px-5 space-y-6">
                             <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                                 {more.map((item) => (
-                                    <a
+                                    <Link
                                         key={item.name}
                                         href={item.href}
                                         className="text-base font-medium text-gray-900 hover:text-gray-700"
                                     >
                                         {item.name}
-                                    </a>
+                                    </Link>
                                 ))}
                             </div>
                             <div>
