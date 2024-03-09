@@ -21,7 +21,7 @@ import {
 
 } from '@heroicons/react/outline';
 import { ChevronDownIcon, CubeTransparentIcon } from '@heroicons/react/solid'
-import { Link } from 'react-router-dom';
+import { Link, a } from 'react-router-dom';
 
 const events = [
     {
@@ -63,6 +63,11 @@ const menu = [
         href: '/contact-us',
         icon: PhoneIcon,
     },
+    {
+        name: 'Study Material',
+        href: '/study-material',
+        icon: BookmarkAltIcon,
+    },
 ]
 const more = [
     // {
@@ -101,7 +106,7 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
                     <div className="flex justify-start lg:w-0 lg:flex-1">
-                        <Link href="/" className='flex justify-start'>
+                        <Link to="/" className='flex justify-start'>
                             <img
                                 className="h-[70px] w-auto sm:h-[70px]"
                                 src={require('../images/white-logo.png')}
@@ -117,7 +122,7 @@ export default function Navbar() {
                     </div>
                     {/* Navbar items */}
                     <Popover.Group as="nav" className="hidden md:flex space-x-10">
-                        <Link href="/" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                        <Link to="/" className="text-base font-medium text-gray-500 hover:text-gray-900">
                             Home
                         </Link>
                         <Popover className="relative">
@@ -154,7 +159,7 @@ export default function Navbar() {
                                                     {events.map((item) => (
                                                         <Link
                                                             key={item.name}
-                                                            href={item.href}
+                                                            to={item.href}
                                                             className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                                         >
                                                             <item.icon className="flex-shrink-0 h-6 w-6 text-gray-800" aria-hidden="true" />
@@ -172,14 +177,15 @@ export default function Navbar() {
                             )}
                         </Popover>
 
-                        <Link href="/gallery" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                        <Link to="/gallery" className="text-base font-medium text-gray-500 hover:text-gray-900">
                             Gallery
                         </Link>
+                        
 
                        {more.map((item) => (
                                                         <Link
                                                             key={item.name}
-                                                            href={item.href}
+                                                            to={item.href}
                                                             className="text-base font-medium text-gray-500 hover:text-gray-900"
                                                         >
                                                                 {item.name}
@@ -238,7 +244,10 @@ export default function Navbar() {
                                 </>
                             )}
                         </Popover> */}
-                        <Link href="/contact-us" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                        <Link to="/study-material" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                            Study Material
+                        </Link>
+                        <Link to="/contact-us" className="text-base font-medium text-gray-500 hover:text-gray-900">
                             Contact us
                         </Link>
                     </Popover.Group>
@@ -255,7 +264,7 @@ export default function Navbar() {
                                     <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
                                 </svg>
                             </a>
-                            <a class="ml-3 text-gray-500" target={'_blank'} href='https://www.linkedin.com/company/infrastructure-society-nit-kkr/'>
+                            <a class="ml-3 text-gray-500" target={'_blank'} href='https://www.aedin.com/company/infrastructure-society-nit-kkr/'>
                                 <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
                                     <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
                                     <circle cx="4" cy="4" r="2" stroke="none"></circle>
@@ -274,14 +283,13 @@ export default function Navbar() {
                 leave="duration-100 ease-in"
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
-
             >
                 <Popover.Panel focus className="absolute top-0 z-10 inset-x-0 p-2 transition transform origin-top-right md:hidden">
                     <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
                         <div className="pt-5 pb-6 px-5">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <Link href="/">
+                                    <Link to="/">
                                         <img
                                             className="h-[70px] w-auto sm:h-[70px]"
                                             src={require('../images/white-logo.png')}
@@ -301,7 +309,7 @@ export default function Navbar() {
                                     {menu.map((item) => (
                                         <Link
                                             key={item.name}
-                                            href={item.href}
+                                            to={item.href}
                                             className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                                         >
                                             <item.icon className="flex-shrink-0 h-6 w-6 text-gray-800" aria-hidden="true" />
@@ -316,7 +324,7 @@ export default function Navbar() {
                                 {more.map((item) => (
                                     <Link
                                         key={item.name}
-                                        href={item.href}
+                                        to={item.href}
                                         className="text-base font-medium text-gray-900 hover:text-gray-700"
                                     >
                                         {item.name}
@@ -336,7 +344,7 @@ export default function Navbar() {
                                             <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
                                         </svg>
                                     </a>
-                                    <a class="ml-3 text-gray-500" target={'_blank'} href='https://www.linkedin.com/company/infrastructure-society-nit-kkr/'>
+                                    <a class="ml-3 text-gray-500" target={'_blank'} href='https://www.aedin.com/company/infrastructure-society-nit-kkr/'>
                                         <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
                                             <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
                                             <circle cx="4" cy="4" r="2" stroke="none"></circle>
