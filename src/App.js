@@ -16,6 +16,8 @@ import Explore from "./Pages/Explore";
 import logo from "./images/white-logo2.png";
 import Dashboard from "./firebase-google-drive-clone/src/components/google-drive/Dashboard";
 import EventRegistration from "./Registration/event_model";
+import AnimatedSVG from "../src/TechSpardha24/Loader.jsx"
+import BackGround from "./TechSpardha24/BackGround.js";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -24,22 +26,26 @@ function App() {
     // Simulating a delay of 2 seconds for demonstration purposes
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1500);
+    }, 3000000);
 
     // Clean up the timer when the component unmounts
     return () => clearTimeout(timer);
   }, []);
 
   return isLoading ? (
-    <div className="loader place-items-center grid justify-items-center align-middle sm:h-[100vh]  h-[90vh]">
-      <div>
-        <img src={logo} className="w-[40vw] sm:w-[20vw]" alt="logo" />
-      </div>
+    // <div className="loader place-items-center grid justify-items-center align-middle sm:h-[100vh]  h-[90vh]">
+    //   <div>
+    //     <img src={logo} className="w-[40vw] sm:w-[20vw]" alt="logo" />
+    //   </div>
+    // </div>
+    <div className="">
+      <BackGround />
+      {/* <AnimatedSVG className =" absolute"/> */}
     </div>
   ) : (
     // Render your actual website content here
     <Router>
-      <Navbar /> //header
+      <Navbar />
       {/* <Banner /> */}
       <Routes>
         <Route path="/events" element={<Events />} />
