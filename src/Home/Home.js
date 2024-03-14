@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Teachers from "../Cards/Teachers";
 import About from "../Components/About";
 import Banner from "../Components/Banner";
 import Content from "../Components/Content";
 import Motive from "../Components/Motive";
-import Carousel from "./Carousel";
-
+import { PopupProvider } from "../TechSpardha24/popup";
+import NewPage from "../TechSpardha24/NewPage"
 export default function Home() {
+
   return (
-    <div>
+    <PopupProvider><div>
       {/* <Banner /> */}
       <div className="lg:flex items-center relative container mx-auto pt-5">
         <div className="w-full lg:w-1/2 h-full lg:pr-10 xl:pr-0 mx-auto">
@@ -41,5 +42,8 @@ export default function Home() {
       <Teachers />
       <Motive />
     </div>
+    <NewPage />
+    </PopupProvider>
+    
   );
 }

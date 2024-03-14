@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 const About = () => {
 
     return (
@@ -7,11 +8,11 @@ const About = () => {
                 <h1 class="sm:text-4xl text-2xl font-medium title-font mb-4 text-gray-900 font-bold">About us</h1>
                 <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Infrastructure is the Official Technical Society of the Department of Civil Engineering formed with the objective of nurturing the talents of budding engineers with an ultimate goal of achieving technical excellence. Herein, the seeds of research are being sowed into the minds of the students so as to encourage the innovation. We work towards sharpening the technical skills of all the students and improving their field knowledge, hence bridging the gap between classrooms and field. Every year, the bright minds capable and willing to contribute to this task are invited to be a part of the group and showcase their managerial skills. This is an institution where the team spirit and enthusiasm is contagious and people work together redefining the very meaning of coordination and exhibit unmatched unity despite all the differences by valuing each and every opinion and idea.</p>
                 <div class="py-2 mx-auto lg:py-7">
-                    <a href="/about-us" style={{ textDecoration: 'none' }} >
+                    <Link to="/about-us" style={{ textDecoration: 'none' }} >
                         <button style={{ borderRadius: '15px' }} class="bg-slate-900 hover:bg-transparent hover:text-gray-900 text-white border-2 border-gray-900 py-2 px-4 flex my-4 py-auto">
                             <h2 className='my-auto py-auto text-center align-middle text-lg font-normal mx-4'>Know more</h2>
                         </button>
-                    </a>
+                    </Link>
                 </div>
             </div>
             <hr />

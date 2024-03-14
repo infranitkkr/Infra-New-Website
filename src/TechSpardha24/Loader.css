@@ -1,4 +1,6 @@
-body 
+.mainDiv{
+  --background: #000000;
+}
   .loader {
     --duration: 3s;
     --primary: rgba(39, 94, 254, 1);
@@ -6,7 +8,7 @@ body
     --primary-rgba: rgba(39, 94, 254, 0);
     width: 200px;
     height: 320px;
-    position: relative;
+    position: absolute;
     transform-style: preserve-3d;
   }
   @media (max-width: 480px) {

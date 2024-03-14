@@ -17,8 +17,6 @@ import logo from "./images/white-logo2.png";
 import Dashboard from "./firebase-google-drive-clone/src/components/google-drive/Dashboard";
 import EventRegistration from "./Registration/event_model";
 import AnimatedSVG from "../src/TechSpardha24/Loader.jsx"
-import BackGround from "./TechSpardha24/BackGround.js";
-
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -26,7 +24,7 @@ function App() {
     // Simulating a delay of 2 seconds for demonstration purposes
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3000000);
+    }, 3000);
 
     // Clean up the timer when the component unmounts
     return () => clearTimeout(timer);
@@ -39,8 +37,7 @@ function App() {
     //   </div>
     // </div>
     <div className="">
-      <BackGround />
-      {/* <AnimatedSVG className =" absolute"/> */}
+      <AnimatedSVG className =" absolute"/>
     </div>
   ) : (
     // Render your actual website content here
