@@ -42,7 +42,7 @@ export default function Home() {
       <Teachers />
       <Motive />
     </div>
-    <NewPage />
+    {/* <NewPage /> */} 
     </PopupProvider>
     
   );

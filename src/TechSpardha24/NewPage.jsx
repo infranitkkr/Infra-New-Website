@@ -6,16 +6,8 @@ import { usePopup } from "./popup.js";
 import video from "../images/back.mp4"
 import { FaArrowRight } from "react-icons/fa";
 
-const NewPage = ({ setIsLoading }) => {
+const NewPage = () => {
     const { popupContent, setPopupContent } = usePopup();
-
-    useEffect(() => {
-
-        return () => {
-            setPopupContent("data")
-        }
-    }, [])
-
 
     if (!popupContent) return null;
     return (
