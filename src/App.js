@@ -37,7 +37,8 @@ function App() {
     //   </div>
     // </div>
     <div className="">
-      <AnimatedSVG className =" absolute"/>
+      {/* <AnimatedSVG className =" absolute"/>  */}
+      <img src={logo} className="w-[40vw] sm:w-[20vw]" alt="logo" />
     </div>
   ) : (
     // Render your actual website content here
