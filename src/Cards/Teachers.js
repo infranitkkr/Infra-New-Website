@@ -5,7 +5,7 @@ const TeachersCard = (data) => {
   return (
     <div class="flex flex-col">
       <div class="justify-center flex">
-        <img src={data.image} class="lg:w-[15vw] h-[30vh] teachers-img w-[60vw]"></img>
+        <img src={data.image} class="lg:w-[15vw] lg:h-[30vh] h-[150px] w-[120px]"></img>
       </div>
       <h1 class="text-center font-bold">{data.name}</h1>
       <h1 class="text-center font-bold">{data.designation}</h1>
@@ -31,7 +31,7 @@ const Teachers = () => {
       </div>
       <div class="flex lg:flex-row space-x-4 justify-center flex-wrap">
         {teacher.map((data) => (
-          <div class="xl:w-1/5 lg:w-1/2 md:w-full px-8 border-l-2 border-gray-200 border-opacity-60 lg:h-[38vh] mb-5">
+          <div class="xl:w-1/5 lg:w-1/2 md:w-full  border-l-2 border-gray-200 border-opacity-60 lg:h-[38vh] mb-5">
             <TeachersCard key={data.name} {...data} />
           </div>
         ))}

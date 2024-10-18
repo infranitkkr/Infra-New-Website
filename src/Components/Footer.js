@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -12,10 +13,10 @@ const Footer = () => {
                     />
                 </div>
                 <div className="flex flex-wrap sm:gap-10 gap-8 items-center justify-center mt-8">
-                    <p className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800"><a target={'_blank'} href="/our-allies#developers">Developers</a></p>
+                    <p className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800"><Link target={'_blank'} to="/our-allies#developers">Developers</Link></p>
                     <p className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800"><a target={'_blank'} href="https://forms.gle/WJcFN8gLYw7ALs7H9">Suggest for site</a></p>
-                    <p className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800"><a target={'_blank'} href="/contact-us">Contact us</a></p>
-                    <p className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800"><a target={'_blank'} href="/">Home</a></p>
+                    <p className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800"><Link target={'_blank'} to="/contact-us">Contact us</Link></p>
+                    <p className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800"><Link target={'_blank'} to="/">Home</Link></p>
                 </div>
                 <div className="flex items-center gap-x-8 mt-6">
                     <a target={'_blank'} href='https://www.facebook.com/InfraSociety'>

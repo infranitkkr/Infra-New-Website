@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 export default function Banner() {
-    return <div>
+  return (
+    <div>
+      {/* !--- CTA Banner ---! */}
 
-        {/* !--- CTA Banner ---! */}
-
-        {/* <section class="w-full bg-slate-900">
+      {/* <section class="w-full bg-slate-900">
             <div class="container px-4 mx-auto">
                 <div class="grid grid-cols-1 py-4 sm:py-1 lg:grid-cols-3">
                     <div class="flex flex-row text-center justify-center text-white my-auto ">
@@ -31,39 +31,54 @@ export default function Banner() {
             </div>
         </section> */}
 
-        {/* !--- CTA Banner ---! */}
+      {/* !--- CTA Banner ---! */}
 
-        {/* !--- Scrolling Banner ---! */}
+      {/* !--- Scrolling Banner ---! */}
 
-        {/* <div class="flex items-center bg-blue text-white text-sm font-bold px-4 py-3" role="alert">
+      {/* <div class="flex items-center bg-blue text-white text-sm font-bold px-4 py-3" role="alert">
                 <svg class="w-4 h-4 mr-2 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.432 0c1.34 0 2.01.912 2.01 1.957 0 1.305-1.164 2.512-2.679 2.512-1.269 0-2.009-.75-1.974-1.99C9.789 1.436 10.67 0 12.432 0zM8.309 20c-1.058 0-1.833-.652-1.093-3.524l1.214-5.092c.211-.814.246-1.141 0-1.141-.317 0-1.689.562-2.502 1.117l-.528-.88c2.572-2.186 5.531-3.467 6.801-3.467 1.057 0 1.233 1.273.705 3.23l-1.391 5.352c-.246.945-.141 1.271.106 1.271.317 0 1.357-.392 2.379-1.207l.6.814C12.098 19.02 9.365 20 8.309 20z" /></svg>
                 <marquee class="text-lg">Something happened that you should know about.</marquee>
             </div> */}
 
-        {/* !--- Scrolling Banner ---! */}
+      {/* !--- Scrolling Banner ---! */}
 
-        {/* !--- Alert/Notification ---! */}
+      {/* !--- Alert/Notification ---! */}
 
-        <div class="w-full text-white bg-slate-900">
-            <div class="container flex items-center justify-center px-6 py-4 mx-auto">
-                <div class="flex">
-                    <svg viewBox="0 0 40 40" class="w-16 h-16 sm:w-6 sm:h-6 fill-current">
-                        <path d="M20 3.33331C10.8 3.33331 3.33337 10.8 3.33337 20C3.33337 29.2 10.8 36.6666 20 36.6666C29.2 36.6666 36.6667 29.2 36.6667 20C36.6667 10.8 29.2 3.33331 20 3.33331ZM21.6667 28.3333H18.3334V25H21.6667V28.3333ZM21.6667 21.6666H18.3334V11.6666H21.6667V21.6666Z"></path>
-                    </svg>
+      <div class="w-full text-white bg-slate-900">
+        <div class="container flex items-center justify-center px-6 py-4 mx-auto">
+          <div class="flex">
+            <svg
+              viewBox="0 0 40 40"
+              class="w-16 h-16 sm:w-6 sm:h-6 fill-current"
+            >
+              <path d="M20 3.33331C10.8 3.33331 3.33337 10.8 3.33337 20C3.33337 29.2 10.8 36.6666 20 36.6666C29.2 36.6666 36.6667 29.2 36.6667 20C36.6667 10.8 29.2 3.33331 20 3.33331ZM21.6667 28.3333H18.3334V25H21.6667V28.3333ZM21.6667 21.6666H18.3334V11.6666H21.6667V21.6666Z"></path>
+            </svg>
 
-                    <p class="mx-3">New update on Call for Proposals/Applications for IITR@175 Partnerships and Fellowships</p>
-                </div>
-                <a href="/explore">
-                    <button class="p-1 transition-colors duration-200 transform rounded-md hover:bg-opacity-25 hover:bg-gray-600 focus:outline-none">
-                        {/* <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <p class="mx-3">
+              New update on Call for Proposals/Applications for IITR@175
+              Partnerships and Fellowships
+            </p>
+          </div>
+          <a href="/explore">
+            <button class="p-1 transition-colors duration-200 transform rounded-md hover:bg-opacity-25 hover:bg-gray-600 focus:outline-none">
+              {/* <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6 18L18 6M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg> */}
-                        <svg xmlns="http://www.w3.org/2000/svg" class="fill-current" width="24" height="24" viewBox="0 0 24 24"><path d="M24 12l-11-8v6h-13v4h13v6z" /></svg>
-                    </button>
-                </a>
-            </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="fill-current"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path d="M24 12l-11-8v6h-13v4h13v6z" />
+              </svg>
+            </button>
+          </a>
         </div>
+      </div>
 
-        {/* !--- Alert/Notification ---! */}
-    </div>;
+      {/* !--- Alert/Notification ---! */}
+    </div>
+  );
 }
