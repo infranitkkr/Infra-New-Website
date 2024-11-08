@@ -7,28 +7,54 @@ import fifth from "../images/Post/5.png";
 import sixth from "../images/Post/6.jpg";
 import seventh from "../images/Post/7.jpg";
 import TeamsCard from "../Cards/TeamsCard";
+import DeveloperCard from "../Cards/DeveloperCard";
+import { postHolder2024 } from "../API/postApi";
+import { developers } from "../API/developerApi";
+
 function Team() {
   return (
     <div>
-      <div className="container flex justify-center mx-auto pt-16">
+      <div className="container flex justify-center mx-auto pt-10">
         <div>
-          <p className="text-gray-500 text-lg text-center font-normal pb-3">MANAGEMENT TEAM</p>
-          <h1 className="xl:text-4xl text-3xl text-center text-gray-800 font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto">The Talented People Behind the Scenes of the Society</h1>
+          {/* <p className="text-gray-500 text-lg text-center font-normal pb-3">MANAGEMENT TEAM</p> */}
+          <h1 className="xl:text-4xl text-3xl text-center text-gray-800 font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto">MANAGEMENT TEAM</h1>
         </div>
       </div>
       <div className="w-full bg-gray-100 px-10 pt-10">
         <div className="container mx-auto">
           <div className="lg:flex md:flex sm:flex items-center xl:justify-around flex-wrap md:justify-around sm:justify-around lg:justify-around">
-            <TeamsCard name={"Saurav Mathur"} post={"President"} image={first} insta= {"https://www.instagram.com/saurav_mathur_17"} linkedin={"https://www.linkedin.com/in/saurav-mathur-195573224"}/>
+            {/* <TeamsCard name={"Saurav Mathur"} post={"President"} image={first} insta= {"https://www.instagram.com/saurav_mathur_17"} linkedin={"https://www.linkedin.com/in/saurav-mathur-195573224"}/>
             <TeamsCard name={"Akash Pandey"} post={"Vice President"} image={second} insta= {"https://www.instagram.com/akashpandey1245"} linkedin={"https://www.linkedin.com/in/akash-pandey-8436b7217"}/>
             <TeamsCard name={"Yashvardhan Singh"} post={"General Secretary"} image={third} insta= {"https://www.instagram.com/yashvardhansingh222"} linkedin={"https://www.linkedin.com/in/%F0%9D%90%98%F0%9D%90%80%F0%9D%90%92%F0%9D%90%87%F0%9D%90%95%F0%9D%90%80%F0%9D%90%91%F0%9D%90%83%F0%9D%90%87%F0%9D%90%80%F0%9D%90%8D-%F0%9D%90%92%F0%9D%90%88%F0%9D%90%8D%F0%9D%90%86%F0%9D%90%87-bb10781b8"}/>
             <TeamsCard name={"Pravesh Kumar"} post={"Joint Secretary"} image={fourth} insta= {"https://www.instagram.com/pravesh_kumar.001"} linkedin={"https://www.linkedin.com/in/prLiavesh-kumar-805160220"}/>
             <TeamsCard name={"Anushka Meena"} post={"Additional Secretary"} image={fifth} insta= {"https://www.instagram.com/Anushkaa.x__"} linkedin={"https://www.linkedin.com/in/anushka-meena-259168252"}/>
-            <TeamsCard name={"Harshith Mediga"} post={"Technical Head"} image={sixth} insta= {"https://www.instagram.com/chinnuharshith3_"} linkedin={"https://www.linkedin.com/in/harshith-mediga-5704021ab"}/>
+            <TeamsCard name={"Harshith Mediga"} post={"Technical Head"} image={sixth} insta= {"https://www.instagram.com/chinnuharshith3_"} linkedin={"https://www.linkedin.com/in/harshith-mediga-5704021ab"}/> */}
+            {postHolder2024.slice(0,2).map((teamMember) => (
+              <TeamsCard
+                key={teamMember._id}
+                name={teamMember.name}
+                post={teamMember.designation}
+                insta={teamMember.insta}
+                linkedin={teamMember.linkedlin}
+                image={teamMember.image} 
+              />
+            ))}
+          </div>
+          <div className="lg:flex md:flex sm:flex items-center xl:justify-around flex-wrap md:justify-around sm:justify-around lg:justify-around">
+            {postHolder2024.slice(2,5).map((teamMember) => (
+              <TeamsCard
+                key={teamMember._id}
+                name={teamMember.name}
+                post={teamMember.designation}
+                insta={teamMember.insta}
+                linkedin={teamMember.linkedlin}
+                image={teamMember.image} 
+              />
+            ))}
           </div>
         </div>
       </div>
-      <div className="container flex justify-center mx-auto pt-16">
+      <div className="container flex justify-center mx-auto pt-16 border-t-2 border-t-gray-100">
         <div>
           <h1 className="xl:text-4xl text-3xl text-center text-gray-800 font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto">Development Team</h1>
         </div>
@@ -36,7 +62,7 @@ function Team() {
       <div id="developers" className="w-full bg-gray-100 px-10 pt-10">
         <div className="container mx-auto">
           <div className="lg:flex md:flex sm:flex items-center xl:justify-around flex-wrap md:justify-around sm:justify-around lg:justify-around">
-            <div className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
+            {/* <div className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
               <div className="rounded overflow-hidden shadow-md bg-white">
                 <div className="absolute -mt-20 w-full flex justify-center">
                   <div className="h-32 w-28">
@@ -149,7 +175,31 @@ function Team() {
                   </div>
                 </div>
               </div>
+            </div> */}
+            {developers.slice(0,2).map((teamMember) => (
+              <DeveloperCard
+                key={teamMember._id}
+                name={teamMember.name}
+                session={teamMember.session}
+                insta={teamMember.insta}
+                linkedin={teamMember.linkedlin}
+                github={teamMember.github}
+                image={teamMember.image} 
+              />
+            ))}
             </div>
+            <div className="lg:flex md:flex sm:flex items-center xl:justify-around flex-wrap md:justify-around sm:justify-around lg:justify-around">
+            {developers.slice(2,4).map((teamMember) => (
+              <DeveloperCard
+                key={teamMember._id}
+                name={teamMember.name}
+                session={teamMember.session}
+                insta={teamMember.insta}
+                linkedin={teamMember.linkedlin}
+                github={teamMember.github}
+                image={teamMember.image} 
+              />
+            ))}
           </div>
         </div>
       </div>

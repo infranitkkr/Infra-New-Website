@@ -36,9 +36,9 @@ function App() {
     //     <img src={logo} className="w-[40vw] sm:w-[20vw]" alt="logo" />
     //   </div>
     // </div>
-    <div className="">
+    <div className="flex items-center justify-center h-screen">
       {/* <AnimatedSVG className =" absolute"/>  */}
-      <img src={logo} className="w-[40vw] sm:w-[20vw]" alt="logo" />
+      <img src={logo} className="w-[40vw] sm:w-[20vw] " alt="logo" />
     </div>
   ) : (
     // Render your actual website content here
