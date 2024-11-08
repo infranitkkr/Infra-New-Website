@@ -1,7 +1,7 @@
 import image6 from './images/6.jpg';
 import image7 from './images/7.jpeg';
 import image8 from './images/8.jpg';
-import image9 from './images/DSC04727-2.jpg';
+import image9 from './images/DSC04727.jpg';
 
 export const developers = [
     {
