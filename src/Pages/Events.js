@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
 import EventRegistrationForm from "../Registration/event_registration";
+import Mixcrete from "../Form/Mixcrete/Mixcrete";
 
 export default function Events() {
   return (
@@ -118,10 +119,6 @@ export default function Events() {
               four-member event for anyone having basic familiarity with nominal
               mix and design mix they can participate in the event.
             </p>
-            <div className=" ml-5 p-0 font-bold text-center">
-              <a href="/register/mixcrete_/MixCrete">Register Now <FontAwesomeIcon icon="fa-solid fa-arrow-right" /> </a>
-              
-            </div>
           </div>
           <div className="lg:flex items-center w-full lg:w-4/5 ">
             <img

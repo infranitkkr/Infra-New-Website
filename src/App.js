@@ -17,6 +17,7 @@ import logo from "./images/white-logo2.png";
 import Dashboard from "./firebase-google-drive-clone/src/components/google-drive/Dashboard";
 import EventRegistration from "./Registration/event_model";
 import AnimatedSVG from "../src/TechSpardha24/Loader.jsx"
+import Mixcrete from "./Form/Mixcrete/Mixcrete.js";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -37,9 +38,9 @@ function App() {
     //   </div>
     // </div>
     <div className="flex items-center justify-center h-screen">
-      {/* <AnimatedSVG className =" absolute"/>  */}
       <img src={logo} className="w-[40vw] sm:w-[20vw] " alt="logo" />
     </div>
+    // <Mixcrete />
   ) : (
     // Render your actual website content here
     <Router>
