@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
 import EventRegistrationForm from "../Registration/event_registration";
-import Mixcrete from "../Form/Mixcrete/Mixcrete";
+import Mixcrete from "../Events/Mixcrete/Form";
 
 export default function Events() {
   return (
@@ -29,11 +29,11 @@ export default function Events() {
         <div class="bg-white shadow-xl rounded-lg w-3/4">
           <ul class="divide-y divide-gray-300">
             <li>
-              <a href="#Mixcrete">
+              <Link to={"/events/mixcrete"}>
                 <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
                   Mixcrete
                 </div>
-              </a>
+              </Link>
             </li>
             <li>
               <a href="#Build-em-all">

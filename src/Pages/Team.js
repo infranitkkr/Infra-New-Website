@@ -1,11 +1,4 @@
 import React from "react";
-import first from "../images/Post/1.jpg";
-import second from "../images/Post/2.png";
-import third from "../images/Post/3.jpg";
-import fourth from "../images/Post/4.jpg";
-import fifth from "../images/Post/5.png";
-import sixth from "../images/Post/6.jpg";
-import seventh from "../images/Post/7.jpg";
 import TeamsCard from "../Cards/TeamsCard";
 import DeveloperCard from "../Cards/DeveloperCard";
 import { postHolder2024 } from "../API/postApi";
@@ -29,26 +22,26 @@ function Team() {
             <TeamsCard name={"Pravesh Kumar"} post={"Joint Secretary"} image={fourth} insta= {"https://www.instagram.com/pravesh_kumar.001"} linkedin={"https://www.linkedin.com/in/prLiavesh-kumar-805160220"}/>
             <TeamsCard name={"Anushka Meena"} post={"Additional Secretary"} image={fifth} insta= {"https://www.instagram.com/Anushkaa.x__"} linkedin={"https://www.linkedin.com/in/anushka-meena-259168252"}/>
             <TeamsCard name={"Harshith Mediga"} post={"Technical Head"} image={sixth} insta= {"https://www.instagram.com/chinnuharshith3_"} linkedin={"https://www.linkedin.com/in/harshith-mediga-5704021ab"}/> */}
-            {postHolder2024.slice(0,2).map((teamMember) => (
+            {postHolder2024.slice(0, 2).map((teamMember) => (
               <TeamsCard
                 key={teamMember._id}
                 name={teamMember.name}
                 post={teamMember.designation}
                 insta={teamMember.insta}
                 linkedin={teamMember.linkedlin}
-                image={teamMember.image} 
+                image={teamMember.image}
               />
             ))}
           </div>
           <div className="lg:flex md:flex sm:flex items-center xl:justify-around flex-wrap md:justify-around sm:justify-around lg:justify-around">
-            {postHolder2024.slice(2,5).map((teamMember) => (
+            {postHolder2024.slice(2, 5).map((teamMember) => (
               <TeamsCard
                 key={teamMember._id}
                 name={teamMember.name}
                 post={teamMember.designation}
                 insta={teamMember.insta}
                 linkedin={teamMember.linkedlin}
-                image={teamMember.image} 
+                image={teamMember.image}
               />
             ))}
           </div>
@@ -59,10 +52,8 @@ function Team() {
           <h1 className="xl:text-4xl text-3xl text-center text-gray-800 font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto">Development Team</h1>
         </div>
       </div>
-      <div id="developers" className="w-full bg-gray-100 px-10 pt-10">
-        <div className="container mx-auto">
-          <div className="lg:flex md:flex sm:flex items-center xl:justify-around flex-wrap md:justify-around sm:justify-around lg:justify-around">
-            {/* <div className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
+
+      {/* <div className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
               <div className="rounded overflow-hidden shadow-md bg-white">
                 <div className="absolute -mt-20 w-full flex justify-center">
                   <div className="h-32 w-28">
@@ -176,7 +167,10 @@ function Team() {
                 </div>
               </div>
             </div> */}
-            {developers.slice(0,2).map((teamMember) => (
+      <div id="developers" className="w-full bg-gray-100 px-10 pt-10">
+        <div className="container mx-auto">
+          <div className="lg:flex md:flex sm:flex items-center xl:justify-around flex-wrap md:justify-around sm:justify-around lg:justify-around">
+            {developers.slice(0, 2).map((teamMember) => (
               <DeveloperCard
                 key={teamMember._id}
                 name={teamMember.name}
@@ -184,12 +178,12 @@ function Team() {
                 insta={teamMember.insta}
                 linkedin={teamMember.linkedlin}
                 github={teamMember.github}
-                image={teamMember.image} 
+                image={teamMember.image}
               />
             ))}
-            </div>
-            <div className="lg:flex md:flex sm:flex items-center xl:justify-around flex-wrap md:justify-around sm:justify-around lg:justify-around">
-            {developers.slice(2,4).map((teamMember) => (
+          </div>
+          <div className="lg:flex md:flex sm:flex items-center xl:justify-around flex-wrap md:justify-around sm:justify-around lg:justify-around">
+            {developers.slice(2, 4).map((teamMember) => (
               <DeveloperCard
                 key={teamMember._id}
                 name={teamMember.name}
@@ -197,7 +191,7 @@ function Team() {
                 insta={teamMember.insta}
                 linkedin={teamMember.linkedlin}
                 github={teamMember.github}
-                image={teamMember.image} 
+                image={teamMember.image}
               />
             ))}
           </div>
