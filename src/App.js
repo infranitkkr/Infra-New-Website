@@ -17,7 +17,8 @@ import logo from "./images/white-logo2.png";
 import Dashboard from "./firebase-google-drive-clone/src/components/google-drive/Dashboard";
 import EventRegistration from "./Registration/event_model";
 import AnimatedSVG from "../src/TechSpardha24/Loader.jsx"
-import Mixcrete from "./Form/Mixcrete/Mixcrete.js";
+import Form from "./Events/Mixcrete/Form.js";
+import Mixcrete from "./Events/Mixcrete/Mixcrete.js";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -45,6 +46,7 @@ function App() {
     // Render your actual website content here
     <Router>
       <Navbar />
+
       {/* <Banner /> */}
       <Routes>
         <Route path="/events" element={<Events />} />
@@ -63,6 +65,8 @@ function App() {
           exact
           element={<EventRegistration />}
         />
+        <Route path="/events/mixcrete" element={<Mixcrete />} />
+        <Route path="/events/mixcrete/form" element={<Form />} />
       </Routes>
       <Footer />
     </Router>
