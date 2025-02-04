@@ -1,7 +1,7 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 
-const Form = () => {
+const AForm = () => {
 
 
   const form = useForm()
@@ -41,7 +41,7 @@ const Form = () => {
   return (
     <div className=' flex flex-col items-center justify-center '>
 
-      <h1 className="text-3xl font-bold mb-6 text-gray-800 flex justify-center items-center">MixCrete</h1>
+      <h1 className="text-3xl font-bold mb-6 text-gray-800 flex justify-center items-center">Archicapture</h1>
 
       <div className="flex flex-row items-center justify-center w-full min-h-screen bg-gray-100 p-6">
 
@@ -137,4 +137,4 @@ const Form = () => {
   )
 }
 
-export default Form
+export default AForm

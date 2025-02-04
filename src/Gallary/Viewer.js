@@ -21,6 +21,19 @@ import image16 from "./Images/16.jpg";
 import image17 from "./Images/17.jpg";
 import image18 from "./Images/18.jpg";
 import image19 from "./Images/19.jpg";
+import image20 from "./Images/20.jpg";
+import image21 from "./Images/21.jpg";
+import image22 from "./Images/22.jpg";
+import image23 from "./Images/23.jpg";
+import image24 from "./Images/24.jpg";
+import image25 from "./Images/25.jpg";
+import image26 from "./Images/26.jpg";
+import image27 from "./Images/27.jpg";
+import image28 from "./Images/28.jpg";
+import image29 from "./Images/29.jpg";
+import image30 from "./Images/30.jpg";
+import image31 from "./Images/31.jpg";
+import image32 from "./Images/32.jpg";
 
 const images = [
     { src: image1, alt: "1" },
@@ -42,6 +55,19 @@ const images = [
     { src: image17, alt: "17" },
     { src: image18, alt: "18" },
     { src: image19, alt: "19" },
+    { src: image20, alt: "20" },
+    { src: image21, alt: "21" },
+    { src: image22, alt: "22" },
+    { src: image23, alt: "23" },
+    { src: image24, alt: "24" },
+    { src: image25, alt: "25" },
+    { src: image26, alt: "26" },
+    { src: image27, alt: "27" },
+    { src: image28, alt: "28" },
+    { src: image29, alt: "29" },
+    { src: image30, alt: "30" },
+    { src: image31, alt: "31" },
+    { src: image32, alt: "32" }
 ];
 
 
@@ -57,12 +83,12 @@ export default function Gallery() {
     if (!mounted) return null; 
 
     return (
-        <div className="bg-gray-100 p-4">
+        <div className="bg-gray-100 p-8">
            <PhotoProvider>
-    <div className="columns-2 md:columns-3 gap-2 ">
+    <div className="columns-2 md:columns-3 gap-4 ">
         {images.map((image, index) => (
             <PhotoView key={index} src={image.src}>
-                <img alt={image.alt} src={image.src} className="w-full rounded-2xl cursor-pointer transition-transform duration-200 my-2 hover:opacity-95 hover:scale-[1.1] " />
+                <img alt={image.alt} src={image.src} className="w-full rounded-2xl cursor-pointer transition-transform duration-200 my-4 hover:opacity-95 hover:scale-[1.1] " />
             </PhotoView>
         ))}
     </div>

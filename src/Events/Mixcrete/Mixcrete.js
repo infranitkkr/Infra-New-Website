@@ -3,12 +3,7 @@ import Carousel from '../Carousel'
 import Component from '../Component';
 
 const Mixcrete = () => {
-    let slides = [
-        "https://i.pinimg.com/originals/51/82/ac/5182ac536727d576c78a9320ac62de30.jpg",
-        "https://wallpapercave.com/wp/wp3386769.jpg",
-        "https://wallpaperaccess.com/full/809523.jpg",
-        "https://getwallpapers.com/wallpaper/full/5/c/0/606489.jpg",
-    ];
+    
     let event = {
         name: "Mixcrete",
         about: " lorem ipsum            Sit nostrud pariatur sunt ipsum officia cupidatat consequat non et non nulla. Enim in sunt qui dolore cillum cupidatat dolore quis aute duis. Nulla sunt aliquip excepteur elit esse veniam ullamco commodo adipisicing. Enim adipisicing tempor irure fugiat consequat minim. Deserunt officia deserunt amet dolor amet consectetur. Velit aliquip excepteur ut excepteur sit deserunt est adipisicing ut proident sit magna minim et.Ex id aliquip tempor officia esse nulla voluptate sunt voluptate ea culpa incididunt. Enim magna do elit elit eiusmod. Et eu quis laborum minim in nulla aliqua adipisicing irure id.",
@@ -20,7 +15,7 @@ const Mixcrete = () => {
     return (
         <div>
             <div>
-                <Carousel slides={slides} />
+                <Carousel  />
             </div>
             <div>
                 <Component event={event} />
