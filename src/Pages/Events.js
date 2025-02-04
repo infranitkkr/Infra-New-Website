@@ -1,8 +1,9 @@
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
 import EventRegistrationForm from "../Registration/event_registration";
-import Mixcrete from "../Events/Mixcrete/Form";
+import Mixcrete from "../Events/Mixcrete/MForm";
 
 export default function Events() {
   return (
@@ -36,67 +37,71 @@ export default function Events() {
               </Link>
             </li>
             <li>
-              <a href="#Build-em-all">
+              <Link to={"/events/build-em-all"}>
                 <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
                   Build-em-all
                 </div>
-              </a>
+
+              </Link>
             </li>
             <li>
-              <a href="#Civiera">
+              <Link to={"/events/civiera"}>
                 <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
                   Civiera
                 </div>
-              </a>
+              </Link>
+
             </li>
             <li>
-              <a href="#Go GATE">
+              <Link to={"/events/gogate"}>
                 <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
                   Go GATE
                 </div>
-              </a>
+              </Link>
+
             </li>
             <li>
-              <a href="#Town Planning">
+              <Link to={"/events/planning"}>
                 <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
                   Town Planning
                 </div>
-              </a>
+              </Link>
+
             </li>
             <li>
-              <a href="#Archicapture">
+              <Link to={"/events/archicapture"}>
                 <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
                   Archicapture
                 </div>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#Intervista">
+              <Link to={"/events/intervista"}>
                 <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
                   Intervista
                 </div>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#Wild flower">
+              <Link to={"/events/wildflower"}>
                 <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
                   Wild flower
                 </div>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#CAD pro">
+              <Link to={"/events/cadpro"}>
                 <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
                   CAD pro
                 </div>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#CV Quiz">
+              <Link to={"/events/cvquiz"}>
                 <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
                   CV Quiz
                 </div>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
