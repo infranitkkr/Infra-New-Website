@@ -8,19 +8,15 @@ const CVForm = () => {
   const { register, handleSubmit, formState, reset, watch } = form;
   const { errors } = formState;
 
-  const fields = ["teamName", "teamLeader", "email", "number"];
+  const fields = ["name", "rollno", "email", "number","branch","year"];
   const formData = watch();
 
-  // Calculate progress percentage
-  const filledFields = fields.filter(
-    (field) => formData[field]?.trim() && !errors[field]
-  ).length;
-  const progress = (filledFields / fields.length) * 100;
+  
 
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch('http://localhost:3001/submit/mixcrete', {
+      const response = await fetch('http://localhost:3001/submit/cvquiz', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -41,46 +37,41 @@ const CVForm = () => {
   return (
     <div className=' flex flex-col items-center justify-center '>
 
-      <h1 className="text-3xl font-bold mb-6 text-gray-800 flex justify-center items-center">MixCrete</h1>
+      <h1 className="text-3xl font-bold mb-6 text-gray-800 flex justify-center items-center">CV Quiz</h1>
 
       <div className="flex flex-row items-center justify-center w-full min-h-screen bg-gray-100 p-6">
 
 
-        <div className=" w-1/3 bg-gray-200 rounded-full  mb-4 p-6">
-          <div
-            className="bg-blue-500 h-4 rounded-full transition-all"
-            style={{ width: `${progress}%` }}
-          ></div>
-        </div>
+        
 
 
-        <div className='flex flex-col justify-center items-center w-2/3 p-6 m-8 bg-white shadow-lg rounded-lg space-y-4'>
+        <div className='flex flex-col justify-center items-center w-2/3  m-8 bg-white shadow-lg rounded-lg space-y-4'>
           <form
             className="flex flex-col w-full p-6 bg-white shadow-lg rounded-lg space-y-4"
             noValidate
             onSubmit={handleSubmit(onSubmit)}
           >
             <div className="flex flex-col space-y-1">
-              <label htmlFor="teamName" className="text-gray-700">Team Name</label>
+              <label htmlFor="name" className="text-gray-700">Name</label>
               <input
                 type="text"
-                id="teamName"
+                id="name"
                 className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                {...register("teamName", { required: "Team Name is required" })}
+                {...register("name", { required: "Name is required" })}
               />
-              <p className="text-red-500 text-sm">{errors.teamName?.message}</p>
+              <p className="text-red-500 text-sm">{errors.name?.message}</p>
             </div>
-
             <div className="flex flex-col space-y-1">
-              <label htmlFor="teamLeader" className="text-gray-700">Team Leader</label>
+              <label htmlFor="rollNo" className="text-gray-700">    Roll No</label>
               <input
-                type="text"
-                id="teamLeader"
-                className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                {...register("teamLeader", { required: "Leader Name is required" })}
+                type="number"
+                id="rollNo"
+                className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+                {...register("rollNo", { required: "Roll No is required" })}
               />
-              <p className="text-red-500 text-sm">{errors.teamLeader?.message}</p>
-            </div>
+              <p className="text-red-500 text-sm">{errors.rollNo?.message}</p>
+            </div>  
+           
 
             <div className="flex flex-col space-y-1">
               <label htmlFor="email" className="text-gray-700">Email</label>
@@ -89,10 +80,10 @@ const CVForm = () => {
                 id="email"
                 className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 {...register("email", {
-                  required: "Email is required",
+                  required: "Domain ID is required",
                   pattern: {
-                    value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-                    message: "Invalid email address",
+                    value: /^[0-9]+@nitkkr\.ac\.in$/,
+                    message: "Domain ID is required",
                   },
                 })}
               />
@@ -104,17 +95,42 @@ const CVForm = () => {
               <input
                 type="number"
                 id="number"
-                className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
                 {...register("number", {
                   required: "Phone number is required",
                   pattern: {
-                    value: /^[0-9]+$/,
-                    message: "Invalid phone number",
+                    value: /^\d{10}$/,
+                    message: "Phone number must be 10 digits",
                   },
                 })}
               />
               <p className="text-red-500 text-sm">{errors.number?.message}</p>
             </div>
+            <div className="flex flex-col space-y-1">
+              <label htmlFor="branch" className="text-gray-700">Branch</label>
+              <input
+                type="text"
+                id="branch"
+                className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                {...register("branch", { required: "Branch is required" })}
+              />
+              <p className="text-red-500 text-sm">{errors.branch?.message}</p>
+            </div>
+            <div className="flex flex-col space-y-1">
+              <label htmlFor="year" className="text-gray-700">Year</label>
+              <input
+                type="number"
+                id="year"
+                className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+                {...register("year", { required: "Year is required" ,pattern: {
+                  value: /^\d{1}$/,
+                  message: "Year can be 1 , 2 , 3 , 4",
+                }})}
+              />
+              <p className="text-red-500 text-sm">{errors.year?.message}</p>
+            </div>  
+                
+
 
             <div className='flex justify-between'>
               <button

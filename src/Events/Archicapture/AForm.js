@@ -91,7 +91,7 @@ const AForm = () => {
                 {...register("email", {
                   required: "Email is required",
                   pattern: {
-                    value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+                    value: /^[a-zA-Z0-9._%+-]+@nitkkr\.ac\.in$/,
                     message: "Invalid email address",
                   },
                 })}

@@ -8,19 +8,14 @@ const BForm = () => {
   const { register, handleSubmit, formState, reset, watch } = form;
   const { errors } = formState;
 
-  const fields = ["teamName", "teamLeader", "email", "number"];
+  const fields = ["teamName", "email", "number", "teamMember1", "teamMember2", "teamMember1RollNo", "teamMember2RollNo"];
   const formData = watch();
 
-  // Calculate progress percentage
-  const filledFields = fields.filter(
-    (field) => formData[field]?.trim() && !errors[field]
-  ).length;
-  const progress = (filledFields / fields.length) * 100;
 
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch('http://localhost:3001/submit/mixcrete', {
+      const response = await fetch('http://localhost:3001/submit/build-em-all', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -41,20 +36,15 @@ const BForm = () => {
   return (
     <div className=' flex flex-col items-center justify-center '>
 
-      <h1 className="text-3xl font-bold mb-6 text-gray-800 flex justify-center items-center">MixCrete</h1>
+      <h1 className="text-3xl font-bold mb-6 text-gray-800 flex justify-center items-center">Build-Em-All</h1>
 
       <div className="flex flex-row items-center justify-center w-full min-h-screen bg-gray-100 p-6">
 
 
-        <div className=" w-1/3 bg-gray-200 rounded-full  mb-4 p-6">
-          <div
-            className="bg-blue-500 h-4 rounded-full transition-all"
-            style={{ width: `${progress}%` }}
-          ></div>
-        </div>
 
 
-        <div className='flex flex-col justify-center items-center w-2/3 p-6 m-8 bg-white shadow-lg rounded-lg space-y-4'>
+
+        <div className='flex flex-col justify-center items-center w-2/3  m-8 bg-white shadow-lg rounded-lg space-y-4'>
           <form
             className="flex flex-col w-full p-6 bg-white shadow-lg rounded-lg space-y-4"
             noValidate
@@ -71,16 +61,7 @@ const BForm = () => {
               <p className="text-red-500 text-sm">{errors.teamName?.message}</p>
             </div>
 
-            <div className="flex flex-col space-y-1">
-              <label htmlFor="teamLeader" className="text-gray-700">Team Leader</label>
-              <input
-                type="text"
-                id="teamLeader"
-                className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                {...register("teamLeader", { required: "Leader Name is required" })}
-              />
-              <p className="text-red-500 text-sm">{errors.teamLeader?.message}</p>
-            </div>
+
 
             <div className="flex flex-col space-y-1">
               <label htmlFor="email" className="text-gray-700">Email</label>
@@ -89,10 +70,10 @@ const BForm = () => {
                 id="email"
                 className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 {...register("email", {
-                  required: "Email is required",
+                  required: "Domain ID is required",
                   pattern: {
-                    value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-                    message: "Invalid email address",
+                    value: /^[0-9]+@nitkkr\.ac\.in$/,
+                    message: "Domain ID is required",
                   },
                 })}
               />
@@ -104,17 +85,45 @@ const BForm = () => {
               <input
                 type="number"
                 id="number"
-                className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none  "
                 {...register("number", {
                   required: "Phone number is required",
                   pattern: {
-                    value: /^[0-9]+$/,
-                    message: "Invalid phone number",
+                    value: /^\d{10}$/,
+                    message: "Phone number must be 10 digits",
                   },
                 })}
               />
               <p className="text-red-500 text-sm">{errors.number?.message}</p>
             </div>
+            {Array.from({ length: 2 }).map((_, index) => (
+              <div key={index}>
+                <div className="flex flex-col space-y-1">
+                  <label htmlFor={`teamMember${index + 2}`} className="text-gray-700">
+                    Team Member {index + 1}
+                  </label>
+                  <input
+                    type="text"
+                    id={`teamMember${index + 1}`}
+                    className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    {...register(`teamMember${index + 1}`, { required: `Member ${index + 1} Name is required` })}
+                  />
+                  <p className="text-red-500 text-sm">{errors[`teamMember${index + 1}`]?.message}</p>
+                </div>
+                <div className="flex flex-col space-y-1">
+                  <label htmlFor={`teamMember${index + 1}RollNo`} className="text-gray-700">
+                    Team Member {index + 1} Roll No
+                  </label>
+                  <input
+                    type="number"
+                    id={`teamMember${index + 1}RollNo`}
+                    className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+                    {...register(`teamMember${index + 1}RollNo`, { required: `Roll No is required` })}
+                  />
+                  <p className="text-red-500  text-sm">{errors[`teamMember${index + 1}RollNo`]?.message}</p>
+                </div>
+              </div>
+            ))}
 
             <div className='flex justify-between'>
               <button

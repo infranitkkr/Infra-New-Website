@@ -11,11 +11,6 @@ const MForm = () => {
   const fields = ["teamName", "teamLeader", "teamLeaderRollNo", "email", "number", "teamMember2", "teamMember2RollNo", "teamMember3", "teamMember3RollNo"];
   const formData = watch();
 
-  // Calculate progress percentage
-  const filledFields = fields.filter(
-    (field) => formData[field]?.trim() && !errors[field]
-  ).length;
-  const progress = (filledFields / fields.length) * 100;
 
 
   const onSubmit = async (data) => {
@@ -45,8 +40,8 @@ const MForm = () => {
 
       <div className="flex flex-row items-center justify-center w-full min-h-screen bg-gray-100 p-6">
 
-
-        {/* <div className=" w-1/3 bg-gray-200 rounded-full  mb-4 p-6">
+        {/* 
+        <div className=" w-1/3 bg-gray-200 rounded-full  mb-4 p-6">
           <div className='bg-white h-4 rounded-full transition-all'> 
             <div
               className="bg-blue-500 h-4 rounded-full transition-all"
@@ -56,7 +51,7 @@ const MForm = () => {
         </div> */}
 
 
-        <div className='flex flex-col justify-center items-center w-2/3 p-6 m-8 bg-white shadow-lg rounded-lg space-y-4'>
+        <div className='flex flex-col justify-center items-center w-2/3 m-8 bg-white shadow-lg rounded-lg space-y-4'>
           <form
             className="flex flex-col w-full p-6 bg-white shadow-lg rounded-lg space-y-4"
             noValidate
@@ -102,10 +97,10 @@ const MForm = () => {
                 id="email"
                 className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 {...register("email", {
-                  required: "Email is required",
+                  required: "Domain ID is required",
                   pattern: {
-                    value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-                    message: "Invalid email address",
+                    value: /^[0-9]+@nitkkr\.ac\.in$/,
+                    message: "Domain ID is required",
                   },
                 })}
               />
