@@ -135,8 +135,8 @@ export default function Navbar() {
                     </div>
                     {/* Navbar items */}
                     <Popover.Group as="nav" className="hidden md:flex space-x-10">
-                        <Link to="/" className="text-base font-medium text-gray-500 hover:text-gray-900">
-                            Home
+                        <Link to="/about-us" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                            About Us
                         </Link>
                         <Popover className="relative">
                             {({ open, close }) => (
@@ -192,17 +192,17 @@ export default function Navbar() {
                         <Link to="/gallery" className="text-base font-medium text-gray-500 hover:text-gray-900">
                             Gallery
                         </Link>
-                        
 
-                       {more.map((item) => (
-                                                        <Link
-                                                            key={item.name}
-                                                            to={item.href}
-                                                            className="text-base font-medium text-gray-500 hover:text-gray-900"
-                                                        >
-                                                                {item.name}
-                                                        </Link>
-                                                    ))}
+
+                        {more.map((item) => (
+                            <Link
+                                key={item.name}
+                                to={item.href}
+                                className="text-base font-medium text-gray-500 hover:text-gray-900"
+                            >
+                                {item.name}
+                            </Link>
+                        ))}
                         <Link to="/study-material" className="text-base font-medium text-gray-500 hover:text-gray-900">
                             Study Material
                         </Link>
@@ -286,20 +286,20 @@ export default function Navbar() {
 
 
                         <div className="">
-                            
-                                <nav className='flex flex-row justify-around mt-4 mb-2 font-semibold'>
-                                    <Popover.Button
-                                        as={Link}
-                                        to='/explore'>
-                                        <p>Explore</p>
-                                    </Popover.Button>
-                                    <Popover.Button
-                                        as={Link}
-                                        to='/our-allies'>
-                                        <p>Our Allies</p>
-                                    </Popover.Button>
-                                </nav>
-                            
+
+                            <nav className='flex flex-row justify-around mt-4 mb-2 font-semibold'>
+                                <Popover.Button
+                                    as={Link}
+                                    to='/explore'>
+                                    <p>Explore</p>
+                                </Popover.Button>
+                                <Popover.Button
+                                    as={Link}
+                                    to='/our-allies'>
+                                    <p>Our Allies</p>
+                                </Popover.Button>
+                            </nav>
+
                             <div class="flex  sm:mt-0 mt-4 pb-4 justify-around sm:justify-start">
                                 <a class="text-gray-500" target={'_blank'} href='https://www.facebook.com/InfraSociety' >
                                     <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
