@@ -1,9 +1,5 @@
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
-import EventRegistrationForm from "../Registration/event_registration";
-import Mixcrete from "../Events/Mixcrete/MForm";
 
 export default function Events() {
   return (
@@ -26,13 +22,13 @@ export default function Events() {
           </p>
         </div>
       </div>
-      <div class="flex justify-center">
-        <div class="bg-white shadow-xl rounded-lg w-3/4">
-          <ul class="divide-y divide-gray-300">
-            <li>
-              <Link to={"/events/mixcrete"}>
+      <div class="flex justify-center items-center ">
+        <div class="bg-white  rounded-lg w-3/4 shadow-xl ml-0   ">
+          <ul class="divide-y  divide-gray-300   w-[100%] ">
+            <li >
+              <Link to={"/events/archicapture"}>
                 <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
-                  Mixcrete
+                  Archicapture
                 </div>
               </Link>
             </li>
@@ -45,54 +41,16 @@ export default function Events() {
               </Link>
             </li>
             <li>
+              <Link to={"/events/cadpro"}>
+                <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
+                  CAD Pro
+                </div>
+              </Link>
+            </li>
+            <li>
               <Link to={"/events/civiera"}>
                 <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
                   Civiera
-                </div>
-              </Link>
-
-            </li>
-            <li>
-              <Link to={"/events/gogate"}>
-                <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
-                  Go GATE
-                </div>
-              </Link>
-
-            </li>
-            <li>
-              <Link to={"/events/planning"}>
-                <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
-                  Town Planning
-                </div>
-              </Link>
-
-            </li>
-            <li>
-              <Link to={"/events/archicapture"}>
-                <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
-                  Archicapture
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link to={"/events/intervista"}>
-                <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
-                  Intervista
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link to={"/events/wildflower"}>
-                <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
-                  Wild flower
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link to={"/events/cadpro"}>
-                <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
-                  CAD pro
                 </div>
               </Link>
             </li>
@@ -103,10 +61,50 @@ export default function Events() {
                 </div>
               </Link>
             </li>
+            <li>
+              <Link to={"/events/gogate"}>
+                <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
+                  Go GATE
+                </div>
+              </Link>
+
+            </li>
+            <li>
+              <Link to={"/events/intervista"}>
+                <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
+                  Intervista
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link to={"/events/mixcrete"}>
+                <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
+                  Mixcrete
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link to={"/events/planning"}>
+                <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
+                  Town Planning
+                </div>
+              </Link>
+
+            </li>
+
+            <li>
+              <Link to={"/events/wildflower"}>
+                <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
+                  Wild flower
+                </div>
+              </Link>
+            </li>
+
+
           </ul>
         </div>
       </div>
-      <section class="px-4 py-20 mx-auto max-w-7xl">
+      {/* <section class="px-4 py-20 mx-auto max-w-7xl">
         <div
           id="Mixcrete"
           class="grid items-center grid-cols-1 mb-24 md:grid-cols-2 gap-y-10 md:gap-y-32 gap-x-10 md:gap-x-24"
@@ -523,7 +521,7 @@ export default function Events() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
