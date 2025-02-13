@@ -1,4 +1,5 @@
 import React from "react";
+import TiltedCard from "../Animations/TiltedCard";
 
 const AboutUs = () => {
     return (
@@ -11,16 +12,35 @@ const AboutUs = () => {
             <section class="text-gray-600 body-font">
                 <div class="container px-5 py-10 mx-auto">
                     <div class="flex flex-col text-center w-full mb-10">
-                        <h2 class="text-xs text-slate-500 tracking-widest font-medium title-font mb-1">OUR</h2>
-                        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Major Activities</h1>
+                        {/* <h2 class="text-xs text-slate-500 tracking-widest font-medium title-font mb-1">OUR</h2> */}
+                        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Our Teams</h1>
                     </div>
                     <div class="flex flex-wrap">
-                    <div class="xl:w-1/3 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+                        <TiltedCard
+                            imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
+                            altText="Kendrick Lamar - GNX Album Cover"
+                            captionText="Kendrick Lamar - GNX"
+                            containerHeight="300px"
+                            containerWidth="300px"
+                            imageHeight="300px"
+                            imageWidth="300px"
+                            rotateAmplitude={12}
+                            scaleOnHover={1.2}
+                            showMobileWarning={false}
+                            showTooltip={true}
+                            displayOverlayContent={true}
+                            overlayContent={
+                                <p className="tilted-card-demo-text">
+                                    Kendrick Lamar - GNX
+                                </p>
+                            }
+                        />
+                        <div class="xl:w-1/3 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
                             <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2"><strong>Web Development Team</strong></h2>
                             <p class="leading-relaxed text-base mb-4">We usually collaborate with writers and designers to ensure all parts of a website fit together, while still looking amazing. In short the web designers are the ones who ensures our website you see online looks good and is easy to navigate.Here we also have frontend and backend developers who always keeps a check and responsible for everything you see on website. We wear many hats for the advancement of our website.
                             </p>
                         </div>
-                        
+
                         <div class="xl:w-1/3 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
                             <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2"><strong>Content</strong></h2>
                             <p class="leading-relaxed text-base mb-4">Curating the voices for the desingns made. Content is what social media all about, it shares media and engages with the views of society. It is designed for publishing our words in a chronological order. It contribute to the collective whole of the designs made.The content is not like a no- brainer it includes the each and every thought and view of the society.
