@@ -53,14 +53,14 @@ export default function Events() {
               <Link to={"/events/build-em-all"}>
               <div className="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg grid grid-cols-2 items-center">
                   <div className="sm:text-lg text-sm justify-self-start">Build-Em-All</div>
-                  <GradientText
+                  <Link to="/events/build-em-all/form"><GradientText
                     colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                     animationSpeed={10}
                     showBorder={false}
                     className="custom-class sm:text-lg text-sm justify-self-end"
                   >
                     Register Here
-                  </GradientText>
+                  </GradientText></Link>
                 </div>
               </Link>
             </li>

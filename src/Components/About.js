@@ -22,7 +22,7 @@ const About = () => {
             <hr />
 
             <div className="lg:my-20 sm:my-14 flex lg:flex-row justify-between flex-col lg:gap-8 gap-12 sm:px-6 px-3">
-                <div className="w-full xl:w-5/12 lg:w-6/12">
+                <div className="w-full xl:w-5/12 lg:w-6/12 px-[50px]">
                     <h2 className="font-bold lg:text-4xl text-3xl lg:leading-9 leading-7 text-gray-800">Our Mission</h2>
                     <p className="font-normal text-base leading-6 text-gray-600 mt-4">One man's 'Magic' is another's engineering, thereupon we the team of Infrastructure Society, The Formal Technical Society of the Department of Civil Engineering, National Institute of Technology, Kurukshetra ceaselessly pouring our efforts to succour the transformation of magic in your dreams to astounding reality. Put in place with motto of fostering the talents of countrywide 'Fledgling engineers' endeavouring technical assistance, on the 26th day of August 1998, unfailingly setting a new benchmark, whensoever standing up for some new initiative.
                     </p>
