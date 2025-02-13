@@ -3,14 +3,29 @@ import Carousel from '../Carousel'
 import Component from '../Component';
 
 const Intervista = () => {
-    let event = {
+    const event = { 
         name: "Intervista",
-        about: " lorem ipsum            Sit nostrud pariatur sunt ipsum officia cupidatat consequat non et non nulla. Enim in sunt qui dolore cillum cupidatat dolore quis aute duis. Nulla sunt aliquip excepteur elit esse veniam ullamco commodo adipisicing. Enim adipisicing tempor irure fugiat consequat minim. Deserunt officia deserunt amet dolor amet consectetur. Velit aliquip excepteur ut excepteur sit deserunt est adipisicing ut proident sit magna minim et.Ex id aliquip tempor officia esse nulla voluptate sunt voluptate ea culpa incididunt. Enim magna do elit elit eiusmod. Et eu quis laborum minim in nulla aliqua adipisicing irure id.",
-        team: "Non reprehenderit exercitation cillum culpa nostrud do veniam non. Sunt sint aliquip velit cupidatat eiusmod magna ea id proident adipisicing deserunt. Labore ullamco excepteur nostrud commodo consequat nostrud qui. Non labore labore duis proident occaecat ut commodo et adipisicing officia deserunt. Adipisicing ex occaecat duis magna ad reprehenderit. Nostrud commodo amet consequat magna id exercitation dolor esse exercitation tempor adipisicing duis irure.",
-        rules: "Adipisicing culpa dolor aliquip excepteur amet id esse. Nulla mollit anim incididunt nulla sunt. Nulla commodo eu cupidatat sint duis. Excepteur nisi et ad commodo esse sint occaecat. Tempor exercitation excepteur dolor adipisicing in esse eiusmod laboris incididunt adipisicing. Incididunt fugiat do qui eu exercitation pariatur aliquip. Non elit mollit ex esse quis tempor velit irure ullamco ipsum dolore.",
-        venue: "Nostrud minim et officia nostrud nisi velit qui exercitation esse culpa cupidatat est. Consectetur proident cillum in nostrud nisi velit. Non laboris occaecat tempor sunt velit esse velit magna eu cupidatat quis mollit sunt. Commodo Lorem anim cupidatat eu labore tempor ullamco anim commodo occaecat anim. Ad voluptate eu excepteur eiusmod dolore qui adipisicing eu incididunt qui reprehenderit eiusmod.",
-        aim: " Qui nisi voluptate sint incididunt enim ex enim sit quis. Veniam irure laborum labore adipisicing cillum minim. Incididunt laborum aute id labore eu amet. Ex amet deserunt occaecat consectetur. Incididunt anim consequat ullamco enim anim culpa. Reprehenderit cupidatat sint nulla est. Est proident est elit consectetur ut adipisicing eiusmod amet tempor laboris proident."
-    }
+        about:
+          "The journey toward securing a job can be overwhelming for many students and young professionals. The Intervista is designed to provide a safe and supportive environment where individuals can discuss their fears, challenges, and uncertainties related to pre-placement processes. This event offers live interactive sessions, expert guidance, and peer discussions to address common anxieties, provide actionable strategies, and boost confidence. Whether you are nervous about interviews, group discussions, or self-presentation, this session is crafted to help you step into your placement journey with clarity and assurance.",
+          
+        toBeAnnounced:
+          "Problem Statement: Details on discussion topics, session formats, and interactive workshops will be announced soon.",
+          
+        team:
+          "\n- Open to final-year students, fresh graduates, and anyone facing pre-placement challenges.\n- Each participant must register individually to join the session.",
+          
+        rules:
+          "\n1. This is an individual participation event; each attendee registers on their own.\n2. Participants are expected to maintain politeness, professionalism, and discipline throughout the session.\n3. All discussions and interactions must remain respectful and constructive.\n4. Attendees should adhere to the schedule and guidelines provided by the event coordinators.\n5. Active participation is encouraged to maximize the benefits of the interactive sessions.",
+          
+        venue:
+          "\n- Mode: The event will be held either virtually (via Zoom/Google Meet) or in-person (venue details to be shared soon).",
+          
+        judgingCriteria:
+          "\n1. Engagement: Active and meaningful participation in discussions.\n2. Clarity: Ability to articulate thoughts and present ideas clearly.\n3. Problem-Solving: Demonstration of actionable strategies to overcome pre-placement challenges.\n4. Professionalism: Maintaining decorum, respectful interaction, and a positive attitude during sessions.",
+          
+        aim:
+          " The Intervista aims to equip participants with practical tools, expert insights, and a supportive network to overcome placement-related anxieties. By engaging in live discussions, mock interviews, and interactive workshops, attendees will build confidence and prepare effectively for their professional journeys."
+      };
   return (
     <div>
             <div>

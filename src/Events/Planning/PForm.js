@@ -1,5 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom'
 
 const PForm = () => {
 
@@ -12,6 +13,7 @@ const PForm = () => {
   const formData = watch();
 
 
+  const navigate = useNavigate();
   const onSubmit = async (data) => {
     try {
       const response = await fetch('http://localhost:3001/submit/planning', {
@@ -24,6 +26,7 @@ const PForm = () => {
 
       if (response.ok) {
         reset();
+        navigate('/success');
         console.log('Form submitted successfully');
       } else {
         console.error('Error submitting form');
@@ -37,13 +40,8 @@ const PForm = () => {
 
       <h1 className="text-3xl font-bold mb-6 text-gray-800 flex justify-center items-center">Planning</h1>
 
-      <div className="flex flex-row items-center justify-center w-full min-h-screen bg-gray-100 p-6">
-
-
-
-
-
-        <div className='flex flex-col justify-center items-center w-2/3   bg-white shadow-lg rounded-lg space-y-4'>
+      <div className="flex flex-row items-center justify-center w-full min-h-screen px-4 bg-gray-100 py-6">
+        <div className='flex flex-col justify-center items-center sm:w-2/3 w-full bg-white shadow-lg rounded-lg space-y-4'>
           <form
             className="flex flex-col w-full p-6 bg-white shadow-lg rounded-lg space-y-4"
             noValidate
@@ -116,7 +114,7 @@ const PForm = () => {
               <p className="text-red-500 text-sm">{errors.number?.message}</p>
             </div>
             {Array.from({ length: 2 }).map((_, index) => (
-              <div key={index}>
+              <div key={index} >
                 <div className="flex flex-col space-y-1">
                   <label htmlFor={`teamMember${index + 2}`} className="text-gray-700">
                     Team Member {index + 2}
@@ -129,7 +127,7 @@ const PForm = () => {
                   />
                   <p className="text-red-500 text-sm">{errors[`teamMember${index + 2}`]?.message}</p>
                 </div>
-                <div className="flex flex-col space-y-1">
+                <div className="flex flex-col space-y-1 mt-3">
                   <label htmlFor={`teamMember${index + 2}RollNo`} className="text-gray-700">
                     Team Member {index + 2} Roll No
                   </label>

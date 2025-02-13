@@ -46,12 +46,12 @@ const CForm = () => {
       <div className="flex flex-row items-center justify-center w-full min-h-screen bg-gray-100 p-6">
 
 
-        <div className=" w-1/3 bg-gray-200 rounded-full  mb-4 p-6">
+        {/* <div className=" w-1/3 bg-gray-200 rounded-full  mb-4 p-6">
           <div
             className="bg-blue-500 h-4 rounded-full transition-all"
             style={{ width: `${progress}%` }}
           ></div>
-        </div>
+        </div> */}
 
 
         <div className='flex flex-col justify-center items-center w-2/3 p-6 m-8 bg-white shadow-lg rounded-lg space-y-4'>

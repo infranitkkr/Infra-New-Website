@@ -3,14 +3,30 @@ import Carousel from '../Carousel'
 import Component from '../Component';
 
 const CVQuiz = () => {
-    let event = {
+    const event = { 
         name: "CV Quiz",
-        about: " lorem ipsum            Sit nostrud pariatur sunt ipsum officia cupidatat consequat non et non nulla. Enim in sunt qui dolore cillum cupidatat dolore quis aute duis. Nulla sunt aliquip excepteur elit esse veniam ullamco commodo adipisicing. Enim adipisicing tempor irure fugiat consequat minim. Deserunt officia deserunt amet dolor amet consectetur. Velit aliquip excepteur ut excepteur sit deserunt est adipisicing ut proident sit magna minim et.Ex id aliquip tempor officia esse nulla voluptate sunt voluptate ea culpa incididunt. Enim magna do elit elit eiusmod. Et eu quis laborum minim in nulla aliqua adipisicing irure id.",
-        team: "Non reprehenderit exercitation cillum culpa nostrud do veniam non. Sunt sint aliquip velit cupidatat eiusmod magna ea id proident adipisicing deserunt. Labore ullamco excepteur nostrud commodo consequat nostrud qui. Non labore labore duis proident occaecat ut commodo et adipisicing officia deserunt. Adipisicing ex occaecat duis magna ad reprehenderit. Nostrud commodo amet consequat magna id exercitation dolor esse exercitation tempor adipisicing duis irure.",
-        rules: "Adipisicing culpa dolor aliquip excepteur amet id esse. Nulla mollit anim incididunt nulla sunt. Nulla commodo eu cupidatat sint duis. Excepteur nisi et ad commodo esse sint occaecat. Tempor exercitation excepteur dolor adipisicing in esse eiusmod laboris incididunt adipisicing. Incididunt fugiat do qui eu exercitation pariatur aliquip. Non elit mollit ex esse quis tempor velit irure ullamco ipsum dolore.",
-        venue: "Nostrud minim et officia nostrud nisi velit qui exercitation esse culpa cupidatat est. Consectetur proident cillum in nostrud nisi velit. Non laboris occaecat tempor sunt velit esse velit magna eu cupidatat quis mollit sunt. Commodo Lorem anim cupidatat eu labore tempor ullamco anim commodo occaecat anim. Ad voluptate eu excepteur eiusmod dolore qui adipisicing eu incididunt qui reprehenderit eiusmod.",
-        aim: " Qui nisi voluptate sint incididunt enim ex enim sit quis. Veniam irure laborum labore adipisicing cillum minim. Incididunt laborum aute id labore eu amet. Ex amet deserunt occaecat consectetur. Incididunt anim consequat ullamco enim anim culpa. Reprehenderit cupidatat sint nulla est. Est proident est elit consectetur ut adipisicing eiusmod amet tempor laboris proident."
-    }
+        about:
+          "Join us for the CV Quiz, one of the premier civil engineering quizzes in northern India! This exciting single-member event is designed to test your classroom knowledge of civil engineering. It provides a platform to compete with the brightest minds and serves as a golden opportunity to learn, explore, and showcase your skills, knowledge, and competence in the field. Engage in a challenging quiz that covers a wide range of civil engineering topics and gain insights that will enhance your academic journey.",
+          
+        toBeAnnounced:
+          "Stay tuned for additional details regarding registration procedures, prize distribution, and any further updates on the quiz format as we approach the event date.",
+          
+        team:
+          "\n- Open to all undergraduate and postgraduate students currently enrolled in civil engineering programs from any college or university.\n- Each participant must register individually.",
+          
+        rules:
+          "\n1. The quiz is a single-member event.\n2. Participation is free for all eligible civil engineering students.\n3. The quiz will encompass a broad range of civil engineering topics designed to test classroom knowledge.\n4. Each participant must register individually with accurate information.\n5. Cheating or any form of malpractice will result in immediate disqualification.\n6. All decisions by the quiz coordinators are final and binding.",
+          
+        venue:
+          "\n- Date: Tuesday, February 04, 2025\n- Time: 2 PM IST\n- Venue: The quiz will be held at a designated venue on campus. (Exact location to be announced soon.)",
+          
+        judgingCriteria:
+          "\n1. Accuracy: Correctness of answers and understanding of key civil engineering concepts.\n2. Speed: Efficiency in providing answers within the allotted time.\n3. Depth of Knowledge: Ability to apply classroom concepts to real-world problem scenarios.\n4. Overall Performance: Consistency and quality of responses throughout the quiz.",
+          
+        aim:
+          "The CV Quiz aims to provide a challenging yet enriching platform for civil engineering students to demonstrate their academic prowess, sharpen their competitive edge, and gain invaluable insights that will aid in their future professional endeavors. It is an opportunity to celebrate and promote excellence in civil engineering education."
+      };
+          
   return (
     <div>
             <div>

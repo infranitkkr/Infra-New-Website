@@ -4,14 +4,29 @@ import Component from '../Component';
 
 const Mixcrete = () => {
     
-    let event = {
-        name: "Mixcrete",
-        about: " lorem ipsum            Sit nostrud pariatur sunt ipsum officia cupidatat consequat non et non nulla. Enim in sunt qui dolore cillum cupidatat dolore quis aute duis. Nulla sunt aliquip excepteur elit esse veniam ullamco commodo adipisicing. Enim adipisicing tempor irure fugiat consequat minim. Deserunt officia deserunt amet dolor amet consectetur. Velit aliquip excepteur ut excepteur sit deserunt est adipisicing ut proident sit magna minim et.Ex id aliquip tempor officia esse nulla voluptate sunt voluptate ea culpa incididunt. Enim magna do elit elit eiusmod. Et eu quis laborum minim in nulla aliqua adipisicing irure id.",
-        team: "Non reprehenderit exercitation cillum culpa nostrud do veniam non. Sunt sint aliquip velit cupidatat eiusmod magna ea id proident adipisicing deserunt. Labore ullamco excepteur nostrud commodo consequat nostrud qui. Non labore labore duis proident occaecat ut commodo et adipisicing officia deserunt. Adipisicing ex occaecat duis magna ad reprehenderit. Nostrud commodo amet consequat magna id exercitation dolor esse exercitation tempor adipisicing duis irure.",
-        rules: "Adipisicing culpa dolor aliquip excepteur amet id esse. Nulla mollit anim incididunt nulla sunt. Nulla commodo eu cupidatat sint duis. Excepteur nisi et ad commodo esse sint occaecat. Tempor exercitation excepteur dolor adipisicing in esse eiusmod laboris incididunt adipisicing. Incididunt fugiat do qui eu exercitation pariatur aliquip. Non elit mollit ex esse quis tempor velit irure ullamco ipsum dolore.",
-        venue: "Nostrud minim et officia nostrud nisi velit qui exercitation esse culpa cupidatat est. Consectetur proident cillum in nostrud nisi velit. Non laboris occaecat tempor sunt velit esse velit magna eu cupidatat quis mollit sunt. Commodo Lorem anim cupidatat eu labore tempor ullamco anim commodo occaecat anim. Ad voluptate eu excepteur eiusmod dolore qui adipisicing eu incididunt qui reprehenderit eiusmod.",
-        aim: " Qui nisi voluptate sint incididunt enim ex enim sit quis. Veniam irure laborum labore adipisicing cillum minim. Incididunt laborum aute id labore eu amet. Ex amet deserunt occaecat consectetur. Incididunt anim consequat ullamco enim anim culpa. Reprehenderit cupidatat sint nulla est. Est proident est elit consectetur ut adipisicing eiusmod amet tempor laboris proident."
-    }
+    const event = { 
+        name: "MIXCRETE",
+        about:
+          "Civil Engineering is a discipline rooted in practical skills and precise calculations. The Infrastructure Society invites students to participate in MixCrete—an engaging event that tests your abilities in concrete mix design. In MixCrete, you will have the opportunity to apply your theoretical knowledge to a hands-on challenge by preparing and casting concrete cubes according to strict mix proportions. This competition not only emphasizes technical proficiency but also encourages creativity and attention to detail. It is a chance to explore the science behind material properties, mix ratios, and quality control. Embrace this challenge as an opportunity to bridge classroom learning with real-world application and to showcase your practical engineering skills.",
+          
+        toBeAnnounced:
+          "Demonstrate your skills in casting concrete cubes by achieving the specified strength through the correct mix proportions. Detailed guidelines and parameters will be announced soon to ensure a challenging yet fair test of your technical expertise.",
+          
+        team:
+          "This is a team event with four members per team. Work collaboratively to plan, calculate, and execute your mix design. Each team member should contribute their expertise—whether in material measurement, mix calculation, or casting technique—to ensure that the collective effort results in a robust, well-formed concrete cube.",
+          
+        rules:
+          "\n1. The event is a team competition with exactly four members per team.\n2. Participants must have a basic understanding of both nominal mix and design mix concepts.\n3. Each team is required to prepare and cast concrete cubes within the given time limits.\n4. Teams must strictly adhere to the specified mix proportions and process guidelines provided on-site.\n5. All necessary materials and tools will be supplied by the organizers.\n6. Safety protocols must be observed at all times, and any deviation from the guidelines may result in disqualification.",
+          
+        venue:
+          "Venue: To be announced. The event will take place at a dedicated facility within the campus that replicates a real construction environment. Workstations will be arranged to provide ample space for material handling and concrete casting, ensuring both safety and efficiency during the competition.",
+          
+        judgingCriteria:
+          "\n1. Proportioning Accuracy: Evaluate how precisely your team adheres to the prescribed mix design.\n2. Strength Achievement: The concrete cube must meet the specified strength criteria, reflecting the quality of your mix.\n3. Execution Skills: Assess the precision in mixing, casting, and finishing of the cube.\n4. Team Coordination: Consider the effectiveness of your collaboration and time management throughout the event.",
+          
+        aim:
+          "MixCrete is designed to provide a practical platform for students to apply their civil engineering knowledge in a real-world scenario. By participating, you will refine your skills in concrete mix design and learn the importance of teamwork, precision, and innovation in construction. This event aims to bridge theoretical learning with practical application, preparing you for future challenges in civil engineering and construction management."
+      };
     return (
         <div>
             <div>
