@@ -38,9 +38,7 @@ export default function Dashboard() {
     setFileUrl("");
   };
   return (
-    <div className={`m-10`}>
-      {/* <Navbar /> */}
-      {/* <Navbar /> */}
+    <div className={`m-10 h-screen`}>
       <h1 className="align-center text-xl font-bold ">Study Material </h1>
       <Container fluid>
         <div className="d-flex align-items-center">

@@ -9,7 +9,7 @@ import image4 from "./Images/4.jpg";
 import image5 from "./Images/5.jpg";
 import image6 from "./Images/6.jpg";
 import image7 from "./Images/7.jpg";
-// import image8 from "./Images/8.jpg";
+import image8 from "./Images/8.jpg";
 import image9 from "./Images/9.jpg";
 import image10 from "./Images/10.jpg";
 import image11 from "./Images/11.jpg";
@@ -34,6 +34,7 @@ import image29 from "./Images/29.jpg";
 import image30 from "./Images/30.jpg";
 import image31 from "./Images/31.jpg";
 import image32 from "./Images/32.jpg";
+import image33 from "./Images/33.jpg";
 
 const images = [
     { src: image1, alt: "1" },
@@ -43,7 +44,7 @@ const images = [
     { src: image5, alt: "5" },
     { src: image6, alt: "6" },
     { src: image7, alt: "7" },
-    // { src: image8, alt: "8" },
+    { src: image8, alt: "8" },
     { src: image9, alt: "9" },
     { src: image10, alt: "10" },
     { src: image11, alt: "11" },
@@ -61,13 +62,14 @@ const images = [
     { src: image23, alt: "23" },
     { src: image24, alt: "24" },
     { src: image25, alt: "25" },
-    // { src: image26, alt: "26" },
+    { src: image26, alt: "26" },
     { src: image27, alt: "27" },
     { src: image28, alt: "28" },
     { src: image29, alt: "29" },
     { src: image30, alt: "30" },
     { src: image31, alt: "31" },
-    { src: image32, alt: "32" }
+    { src: image32, alt: "32" },
+    { src: image33, alt: "33" },
 ];
 
 
