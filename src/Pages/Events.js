@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ShinyText from '../Animations/ShinyText';
+import GradientText from '../Animations/GradientText';
+
 
 export default function Events() {
   return (
@@ -22,71 +25,148 @@ export default function Events() {
           </p>
         </div>
       </div>
+
       <div class="flex justify-center items-center ">
-        <div class="bg-white  rounded-lg w-3/4 shadow-xl ml-0   ">
+        <div class="bg-white  rounded-lg sm:w-3/4 w-5/6 shadow-xl ml-0   ">
           <ul class="divide-y  divide-gray-300   w-[100%] ">
-            <li >
+
+
+            <li>
               <Link to={"/events/archicapture"}>
-                <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
-                  Archicapture
+                <div className="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg grid grid-cols-2 items-center">
+                  <div className="sm:text-lg text-sm justify-self-start">Archicapture</div>
+                  {/* <GradientText
+                    colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                    animationSpeed={10}
+                    showBorder={false}
+                    className="custom-class sm:text-lg text-sm justify-self-end"
+                  >
+                    Register Here
+                  </GradientText> */}
                 </div>
               </Link>
             </li>
+
+
+
             <li>
               <Link to={"/events/build-em-all"}>
-                <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
-                  Build-em-all
+              <div className="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg grid grid-cols-2 items-center">
+                  <div className="sm:text-lg text-sm justify-self-start">Build-Em-All</div>
+                  <GradientText
+                    colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                    animationSpeed={10}
+                    showBorder={false}
+                    className="custom-class sm:text-lg text-sm justify-self-end"
+                  >
+                    Register Here
+                  </GradientText>
                 </div>
-
               </Link>
             </li>
             <li>
               <Link to={"/events/cadpro"}>
-                <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
-                  CAD Pro
+              <div className="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg grid grid-cols-2 items-center">
+                  <div className="sm:text-lg text-sm justify-self-start">CAD Pro</div>
+                  <GradientText
+                    colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                    animationSpeed={10}
+                    showBorder={false}
+                    className="custom-class sm:text-lg text-sm justify-self-end"
+                  >
+                    Register Here
+                  </GradientText>
                 </div>
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to={"/events/civiera"}>
-                <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
-                  Civiera
+                <div className="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg grid grid-cols-2 items-center">
+                  <div className="sm:text-lg text-sm justify-self-start">Civiera</div>
+                  <GradientText
+                    colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                    animationSpeed={10}
+                    showBorder={false}
+                    className="custom-class sm:text-lg text-sm justify-self-end"
+                  >
+                    Register Here
+                  </GradientText>
                 </div>
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link to={"/events/cvquiz"}>
-                <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
-                  CV Quiz
+              <div className="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg grid grid-cols-2 items-center">
+                  <div className="sm:text-lg text-sm justify-self-start">CV Quiz</div>
+                  <GradientText
+                    colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                    animationSpeed={10}
+                    showBorder={false}
+                    className="custom-class sm:text-lg text-sm justify-self-end"
+                  >
+                    Register Here
+                  </GradientText>
                 </div>
               </Link>
             </li>
             <li>
               <Link to={"/events/gogate"}>
-                <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
-                  Go GATE
+              <div className="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg grid grid-cols-2 items-center">
+                  <div className="sm:text-lg text-sm justify-self-start">Go Gate</div>
+                  <GradientText
+                    colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                    animationSpeed={10}
+                    showBorder={false}
+                    className="custom-class sm:text-lg text-sm justify-self-end"
+                  >
+                    Register Here
+                  </GradientText>
                 </div>
               </Link>
 
             </li>
             <li>
               <Link to={"/events/intervista"}>
-                <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
-                  Intervista
+              <div className="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg grid grid-cols-2 items-center">
+                  <div className="sm:text-lg text-sm justify-self-start">Invervista</div>
+                  {/* <GradientText
+                    colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                    animationSpeed={10}
+                    showBorder={false}
+                    className="custom-class sm:text-lg text-sm justify-self-end"
+                  >
+                    Register Here
+                  </GradientText> */}
                 </div>
               </Link>
             </li>
             <li>
               <Link to={"/events/mixcrete"}>
-                <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
-                  Mixcrete
+              <div className="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg grid grid-cols-2 items-center">
+                  <div className="sm:text-lg text-sm justify-self-start">Mixcrete</div>
+                  <GradientText
+                    colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                    animationSpeed={10}
+                    showBorder={false}
+                    className="custom-class sm:text-lg text-sm justify-self-end"
+                  >
+                    Register Here
+                  </GradientText>
                 </div>
               </Link>
             </li>
             <li>
               <Link to={"/events/planning"}>
-                <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
-                  Town Planning
+              <div className="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg grid grid-cols-2 items-center">
+                  <div className="sm:text-lg text-sm justify-self-start">Planning</div>
+                  <GradientText
+                    colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                    animationSpeed={10}
+                    showBorder={false}
+                    className="custom-class sm:text-lg text-sm justify-self-end"
+                  >
+                    Register Here
+                  </GradientText>
                 </div>
               </Link>
 
@@ -94,8 +174,16 @@ export default function Events() {
 
             <li>
               <Link to={"/events/wildflower"}>
-                <div class="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg">
-                  Wild flower
+              <div className="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg grid grid-cols-2 items-center">
+                  <div className="sm:text-lg text-sm justify-self-start">Wild Flower</div>
+                  {/* <GradientText
+                    colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                    animationSpeed={10}
+                    showBorder={false}
+                    className="custom-class sm:text-lg text-sm justify-self-end"
+                  >
+                    Register Here
+                  </GradientText> */}
                 </div>
               </Link>
             </li>
