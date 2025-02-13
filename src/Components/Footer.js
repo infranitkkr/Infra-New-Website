@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <div className="mx-auto container xl:px-20 lg:px-12 sm:px-6 px-4 py-8">
+        <div className="mx-auto container xl:px-20 lg:px-12 sm:px-6 px-4 py-8 border-t-2 mt-10 border-gray-100">
             <div className="flex flex-col items-center justify-center">
                 <div>
                     <img
-                        className="h-[100px] w-auto sm:h-[100px]"
+                        className="h-16 w-auto sm:h-20"
                         src={require('../images/white-logo.png')}
                         alt=""
                     />

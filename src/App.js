@@ -42,6 +42,7 @@ import Mixcrete from "./Events/Mixcrete/Mixcrete.js";
 import Planning from "./Events/Planning/Planning.js"
 import Wildflower from "./Events/Wildflower/Wildflower.js"
 
+import Registered from "./Events/Registered.js";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -96,12 +97,6 @@ function App() {
 
 
   return isLoading ? (
-
-
-
-
-
-
     // <div className="loader place-items-center grid justify-items-center align-middle sm:h-[100vh]  h-[90vh]">
     //   <div>
     //     <img src={logo} className="w-[40vw] sm:w-[20vw]" alt="logo" />
@@ -133,6 +128,8 @@ function App() {
 
         {/* dynamic  routes for every form */}
         <Route path="/events/:eventName/form" element={<EventForm />} />
+        <Route path="/events/:eventName/form/success" element={<Registered />} />
+        <Route path="/success" element={<Registered />} />
       </Routes>
       
       <Footer />
