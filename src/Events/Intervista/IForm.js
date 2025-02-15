@@ -20,7 +20,7 @@ const IForm = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch('http://localhost:3001/submit/mixcrete', {
+      const response = await fetch('hhttps://infra-event-form.onrender.com/submit/mixcrete', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

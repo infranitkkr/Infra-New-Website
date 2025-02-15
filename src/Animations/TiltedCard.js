@@ -90,7 +90,7 @@ export default function TiltedCard({
       )}
 
       <motion.div
-        className="relative [transform-style:preserve-3d]"
+        className="relative [transform-style:preserve-3d] border-2"
         style={{
           width: imageWidth,
           height: imageHeight,
@@ -99,7 +99,7 @@ export default function TiltedCard({
           scale,
         }}
       >
-        <motion.img
+        {/* <motion.img
           src={imageSrc}
           alt={altText}
           className="absolute top-0 left-0 object-cover rounded-[15px] will-change-transform [transform:translateZ(0)]"
@@ -107,13 +107,16 @@ export default function TiltedCard({
             width: imageWidth,
             height: imageHeight,
           }}
-        />
+        /> */}
 
         {displayOverlayContent && overlayContent && (
           <motion.div
             className="absolute top-0 left-0 z-[2] will-change-transform [transform:translateZ(30px)]"
           >
-            {overlayContent}
+            <p>
+            We usually collaborate with writers and designers to ensure all parts of a website fit together, while still looking amazing. In short the web designers are the ones who ensures our website you see online looks good and is easy to navigate.Here we also have frontend and backend developers who always keeps a check and responsible for everything you see on website. We wear many hats for the advancement of our website.
+            </p>
+            {/* {overlayContent} */}
           </motion.div>
         )}
       </motion.div>

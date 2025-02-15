@@ -23,6 +23,7 @@
     "gsap": "^3.12.7",
     "lightgallery": "^2.8.2",
     "material-ui-community-icons": "^0.15.0",
+    "nodemailer": "^6.10.0",
     "ogl": "^1.0.11",
     "polished": "^4.3.1",
     "pure-react-carousel": "^1.27.8",

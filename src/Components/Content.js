@@ -7,7 +7,7 @@ export default function Content() {
             <div class="container px-5 py-10 mx-auto">
                 <div class="flex flex-col text-center w-full mb-10">
                     <h2 class="text-xs text-slate-500 tracking-widest font-medium title-font mb-1">SOME OF OUR</h2>
-                    <h1 class="lg:text-4xl text-3xl font-bold font-medium title-font mb-4 text-gray-900">Recent Activities</h1>
+                    <h1 class="lg:text-4xl text-3xl font-bold title-font mb-4 text-gray-900">Recent Activities</h1>
                 </div>
                 <div class="flex flex-wrap">
                     {workshop.slice(0,3).map((data) => (

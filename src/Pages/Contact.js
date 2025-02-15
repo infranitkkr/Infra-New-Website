@@ -1,25 +1,56 @@
 import React from 'react'
+import FadeContent from '../Animations/FadeContent';
+
 
 export default function Contact() {
     const handleEmailClick = () => {
         const email = 'infrastructure@nitkkr.ac.in';
         const subject = '';
         const body = '';
-    
+
         const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
         const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         const gmailUrl = 'https://mail.google.com';
-    
+
         if (isMobile) {
-          // Open Gmail app on mobile
-          window.location.href = mailtoUrl;
+            window.location.href = mailtoUrl;
         } else {
-          // Open Gmail website on desktop
-          window.open(gmailUrl, '_blank');
+            window.open(gmailUrl, '_blank');
         }
-      };
+    };
+
+
     return (
-        <section class="text-gray-600 body-font relative">
+        <div className='flex flex-col items-center mt-4 sm:h-screen bg-slate-600'>
+            <div className='flex justify-start items-start bg-red-400'>
+                <h1 className='text-4xl font-bold w-screen pl-16'>
+                    Contact Us
+                </h1>
+            </div>
+            <div className='sm:flex sm:flex-row flex-col gap-4 w-full'>
+               
+                <div className='sm:flex-col justify-start items-center sm:w-1/2 w-full bg-amber-500 sm:pl-20 pl-8 mt-4'>
+                <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} >
+                    <h1 className=' sm:text-6xl text-5xl font-extrabold'>
+                        Get In Touch
+                    </h1>
+                    <p>
+                        After brainstorming about insights, get the power to create something real. Bring your ideas to life and share your vision with concrete elements.
+                    </p>
+                </FadeContent>
+                </div>
+                <div className='flex justify-center items-center sm:w-1/2 w-full h-[90vh] bg-gray-100 sm:m-4 rounded-3xl'>
+
+                    <iframe
+                        title={"NIT-KKR"}
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13828.675043139203!2d76.80626880664013!3d29.94582404957092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390e3f51bab18cb5%3A0x96200205143e35f6!2sNIT%2C%20Thanesar%2C%20Haryana%20136119!5e0!3m2!1sen!2sin!4v1710228156244!5m2!1sen!2sin"
+                        allowFullScreen=""
+                        loading="lazy"
+                        className="w-full sm:h-[90vh] h-full rounded-3xl"
+                        />
+                </div>
+            </div>
+            {/* <section class="text-gray-600 body-font relative">
             <div class="container px-5 py-20 mx-auto">
                 <div class="flex flex-col text-center w-full mb-12">
                     <h1 class="sm:text-4xl text-3xl font-bold title-font mb-4 text-gray-900">Contact Us</h1>
@@ -63,6 +94,10 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
-        </section>
+        </section> */}
+
+
+
+        </div>
     )
 }

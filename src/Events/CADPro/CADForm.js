@@ -14,7 +14,7 @@ const CADForm = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch('http://localhost:3001/submit/cadpro', {
+      const response = await fetch('https://infra-event-form.onrender.com/submit/cadpro', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

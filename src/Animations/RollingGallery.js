@@ -107,7 +107,7 @@ const RollingGallery = ({
 
   return (
     <div className="relative h-2/5 sm:h-2/3 w-full overflow-hidden">
-      <div
+      {/* <div
         className="absolute top-0 left-0 h-full w-[28px] z-10"
         style={{
           background:
@@ -120,7 +120,7 @@ const RollingGallery = ({
           background:
             "linear-gradient(to right, rgba(0,0,0,0) 0%, #060606 100%)",
         }}
-      />
+      /> */}
 
       <div className="flex h-full items-center justify-center [perspective:1000px] [transform-style:preserve-3d]">
         <motion.div
@@ -138,7 +138,7 @@ const RollingGallery = ({
             width: cylinderWidth,
             transformStyle: "preserve-3d",
           }}
-          className="flex min-h-[200px] cursor-grab items-center justify-center [transform-style:preserve-3d]"
+          className="flex sm:min-h-[300px] min-h-[200px] cursor-grab items-center justify-center [transform-style:preserve-3d]"
         >
           {images.map((url, i) => (
             <div

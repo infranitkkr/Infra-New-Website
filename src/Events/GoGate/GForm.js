@@ -16,7 +16,7 @@ const GForm = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch('http://localhost:3001/submit/gogate', {
+      const response = await fetch('https://infra-event-form.onrender.com/submit/gogate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

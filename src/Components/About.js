@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import AnimatedContent from "../Animations/AnimatedContent";
 const About = () => {
 
     return (
@@ -23,10 +24,16 @@ const About = () => {
 
             <div className="lg:my-20 sm:my-14 flex lg:flex-row justify-between flex-col lg:gap-8 gap-12 sm:px-6 px-3">
                 <div className="w-full xl:w-5/12 lg:w-6/12">
+                <AnimatedContent
+                direction="horizontal"
+                reverse={true}>
+                    
+
                     <h2 className="font-bold lg:text-4xl text-3xl lg:leading-9 leading-7 text-gray-800">Our Mission</h2>
                     <p className="font-normal text-base leading-6 text-gray-600 mt-4">One man's 'Magic' is another's engineering, thereupon we the team of Infrastructure Society, The Formal Technical Society of the Department of Civil Engineering, National Institute of Technology, Kurukshetra ceaselessly pouring our efforts to succour the transformation of magic in your dreams to astounding reality. Put in place with motto of fostering the talents of countrywide 'Fledgling engineers' endeavouring technical assistance, on the 26th day of August 1998, unfailingly setting a new benchmark, whensoever standing up for some new initiative.
                     </p>
                     <p className="font-normal text-base leading-6 text-gray-600 mt-6">From sowing the seeds of research in brainiacs to fine-tuning the technical skills and field knowledge, The society has been, so far, successful in bridging the gap between classrooms and field with a team of bright minds fused together exhibiting inimitable unity heedless of the differences. Sculpturing the team's strive in words, copious events are organised at institute and national level taking vision of dreams, applying magic of science and mathematics and knowledge of nature's material to create the world that never has been.</p>
+                </AnimatedContent>
                 </div>
                 <div className="lg:flex items-center w-full lg:w-1/2 ">
                     <img className="lg:block hidden w-full" src={require('../images/about2.jpg')} alt="people discussing on board" style={{ borderRadius: '15px' }} />

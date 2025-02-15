@@ -15,7 +15,6 @@ import Navbar from "./Components/Navbar";
 import Team from "./Pages/Team";
 import Workshop from "./Pages/Workshop";
 import Explore from "./Pages/Explore";
-import logo from "./images/white-logo2.png";
 import Dashboard from "./firebase-google-drive-clone/src/components/google-drive/Dashboard";
 
 
@@ -43,6 +42,7 @@ import Planning from "./Events/Planning/Planning.js"
 import Wildflower from "./Events/Wildflower/Wildflower.js"
 
 import Registered from "./Events/Registered.js";
+import LoadingPage from "./Components/LoadingPage.js";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -102,9 +102,10 @@ function App() {
     //     <img src={logo} className="w-[40vw] sm:w-[20vw]" alt="logo" />
     //   </div>
     // </div>
-    <div className="flex items-center justify-center h-screen">
-      <img src={logo} className="w-[40vw] sm:w-[20vw] " alt="logo" />
-    </div>
+    // <div className="flex items-center justify-center h-screen">
+    //   <img src={logo3} className="w-[40vw] sm:w-[20vw] " alt="logo" />
+    // </div>
+    <LoadingPage/>
   ) : (
 
     <Router>
