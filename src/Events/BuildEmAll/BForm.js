@@ -111,13 +111,13 @@ const BForm = () => {
                   <p className="text-red-500 text-sm">{errors[`teamMember${index + 1}`]?.message}</p>
                 </div>
                 <div className="flex flex-col space-y-1">
-                  <label htmlFor={`teamMember${index + 1}RollNo`} className="text-gray-700">
+                  <label htmlFor={`teamMember${index + 1}RollNo`} className="text-gray-700 mt-3">
                     Team Member {index + 1} Roll No
                   </label>
                   <input
                     type="number"
                     id={`teamMember${index + 1}RollNo`}
-                    className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+                    className="p-2 border border-gray-300  rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
                     {...register(`teamMember${index + 1}RollNo`, { required: `Roll No is required` })}
                   />
                   <p className="text-red-500  text-sm">{errors[`teamMember${index + 1}RollNo`]?.message}</p>

@@ -40,9 +40,9 @@ const events = [
 ]
 const menu = [
     {
-        name: 'Home',
-        href: '/',
-        icon: HomeIcon
+        name: 'About Us',
+        href: '/about-us',
+        icon: UserGroupIcon
     },
     {
         name: 'Techspardha Events',
