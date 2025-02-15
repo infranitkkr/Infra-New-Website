@@ -40,9 +40,9 @@ const events = [
 ]
 const menu = [
     {
-        name: 'About Us',
+        name: 'About Us', 
         href: '/about-us',
-        icon: UserGroupIcon
+        icon: UserGroupIcon 
     },
     {
         name: 'Techspardha Events',
@@ -135,8 +135,8 @@ export default function Navbar() {
                     </div>
                     {/* Navbar items */}
                     <Popover.Group as="nav" className="hidden md:flex space-x-10">
-                        <Link to="/about-us" className="text-base font-medium text-gray-500 hover:text-gray-900">
-                            About Us
+                         <Link to="/about-us" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                             About Us
                         </Link>
                         <Popover className="relative">
                             {({ open, close }) => (

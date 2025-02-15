@@ -10,13 +10,16 @@ const About = () => {
                     Infrastructure is the Official Technical Society of the Department of Civil Engineering formed with the objective of nurturing the talents of budding engineers with an ultimate goal of achieving technical excellence. Herein, the seeds of research are being sowed into the minds of the students so as to encourage the innovation. We work towards sharpening the technical skills of all the students and improving their field knowledge, hence bridging the gap between classrooms and field. Every year, the bright minds capable and willing to contribute to this task are invited to be a part of the group and showcase their managerial skills. This is an institution where the team spirit and enthusiasm is contagious and people work together redefining the very meaning of coordination and exhibit unmatched unity despite all the differences by valuing each and every opinion and idea.
                 </p>
                 <div class="py-2 mx-auto lg:py-7">
-                    <Link to="/about-us" style={{ textDecoration: 'none' }} >
-                        <button style={{
-                            borderRadius: '15px',
-                        }} className='bg-slate-900 text-white hover:bg-white hover:text-black    border-2 border-gray-900 py-2 px-4 flex my-4 py-auto'>
-                            <h2 className='my-auto py-auto text-center align-middle text-lg font-normal mx-4  '>Know more</h2>
-                        </button>
-                    </Link>
+                <Link to="/about-us" style={{ textDecoration: "none" }}>
+  <button
+    style={{ borderRadius: "15px" }}
+    className="group bg-slate-900 text-white hover:bg-white hover:text-black border-2 border-gray-900 py-2 px-4 flex my-4"
+  >
+    <h2 className="my-auto text-center text-lg font-normal mx-4 group-hover:text-black">
+      Know more
+    </h2>
+  </button>
+</Link>
                 </div>
             </div>
             <hr />

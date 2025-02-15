@@ -12,10 +12,10 @@ export default function TiltedCard({
   imageSrc,
   altText = "Tilted card image",
   captionText = "",
-  containerHeight = "300px",
-  containerWidth = "300px",
-  imageHeight = "300px",
-  imageWidth = "300px",
+    containerHeight = "350px",    
+    containerWidth = "400px",
+    imageHeight = "350px",
+    imageWidth = "400px",
   scaleOnHover = 1.1,
   rotateAmplitude = 14,
   showMobileWarning = true,
@@ -87,7 +87,7 @@ export default function TiltedCard({
      
 
       <motion.div
-        className="relative [transform-style:preserve-3d] border-2 overflow-hidden"
+        className="relative [transform-style:preserve-3d]  overflow-hidden shadow"
         style={{
           width: imageWidth,
           height: imageHeight,
@@ -102,32 +102,19 @@ export default function TiltedCard({
 
         {displayOverlayContent && title && (
           <motion.div
-            className="absolute top-0 left-0 z-10 p-2 text-black  text-sm"
+            className="  text-black  text-sm "
             style={{ pointerEvents: "none" }}
           >
- <h2 className="mt-4 text-lg font-bold text-gray-900">
-                  {title}
-                </h2>
-                <p className="text-base text-gray-600 text-center">
-                  {para}
-                </p>
+<div class=" px-4 py-2 border-opacity-60 text-center">
+<h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-3"><strong>{title}</strong></h2>
+<p class="leading-relaxed text-sm text-grey">{para}</p>
+</div>  
           </motion.div>
         )}
       </motion.div>
 
-      {showTooltip && (
-        <motion.figcaption
-          className="pointer-events-none absolute left-0 top-0 rounded bg-white px-2 py-1 text-xs text-gray-800 opacity-0 hidden sm:block"
-          style={{
-            x,
-            y,
-            opacity,
-            rotate: rotateFigcaption,
-          }}
-        >
-          {captionText}
-        </motion.figcaption>
-      )}
+
     </figure>
   );
 }
+
