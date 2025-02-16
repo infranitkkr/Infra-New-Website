@@ -8,7 +8,7 @@ const CADForm = () => {
   const { register, handleSubmit, formState, reset, watch } = form;
   const { errors } = formState;
 
-  const fields = ["teamName", "teamLeader", "email", "number","teamLeaderRollNo" ,"teamMember2","teamMember2RollNo","teamMember3RollNo","teamMember3"];
+  const fields = ["teamName", "teamLeader", "email", "number", "teamLeaderRollNo", "teamMember2", "teamMember2RollNo", "teamMember3RollNo", "teamMember3"];
   const formData = watch();
 
 
@@ -130,7 +130,7 @@ const CADForm = () => {
                   <p className="text-red-500 text-sm">{errors[`teamMember${index + 2}`]?.message}</p>
                 </div>
                 <div className="flex flex-col space-y-1">
-                  <label htmlFor={`teamMember${index + 2}RollNo`} className="text-gray-700">
+                  <label htmlFor={`teamMember${index + 1}RollNo`} className="text-gray-700 mt-3">
                     Team Member {index + 2} Roll No
                   </label>
                   <input
@@ -143,7 +143,6 @@ const CADForm = () => {
                 </div>
               </div>
             ))}
-  
 
             <div className='flex justify-between'>
               <button

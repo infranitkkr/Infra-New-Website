@@ -29,6 +29,7 @@
     "pure-react-carousel": "^1.27.8",
     "react": "^17.0.2",
     "react-awesome-loaders-py3": "^0.1.1",
+    "react-blurhash": "^0.3.0",
     "react-bootstrap": "^2.8.0",
     "react-confetti": "^6.2.2",
     "react-confetti-explosion": "^1.5.1",

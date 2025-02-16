@@ -1,3 +1,4 @@
+// TiltedCard.js
 import { useRef, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
@@ -11,15 +12,16 @@ export default function TiltedCard({
   imageSrc,
   altText = "Tilted card image",
   captionText = "",
-  containerHeight = "300px",
-  containerWidth = "100%",
-  imageHeight = "300px",
-  imageWidth = "300px",
+    containerHeight = "350px",    
+    containerWidth = "400px",
+    imageHeight = "350px",
+    imageWidth = "400px",
   scaleOnHover = 1.1,
   rotateAmplitude = 14,
   showMobileWarning = true,
   showTooltip = true,
-  overlayContent = null,
+  title = null,
+  para=null,
   displayOverlayContent = false,
 }) {
   const ref = useRef(null);
@@ -39,7 +41,6 @@ export default function TiltedCard({
 
   function handleMouse(e) {
     if (!ref.current) return;
-
     const rect = ref.current.getBoundingClientRect();
     const offsetX = e.clientX - rect.left - rect.width / 2;
     const offsetY = e.clientY - rect.top - rect.height / 2;
@@ -83,14 +84,10 @@ export default function TiltedCard({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {showMobileWarning && (
-        <div className="absolute top-4 text-center text-sm block sm:hidden">
-          This effect is not optimized for mobile. Check on desktop.
-        </div>
-      )}
+     
 
       <motion.div
-        className="relative [transform-style:preserve-3d] border-2"
+        className="relative [transform-style:preserve-3d]  overflow-hidden shadow"
         style={{
           width: imageWidth,
           height: imageHeight,
@@ -99,41 +96,24 @@ export default function TiltedCard({
           scale,
         }}
       >
-        {/* <motion.img
-          src={imageSrc}
-          alt={altText}
-          className="absolute top-0 left-0 object-cover rounded-[15px] will-change-transform [transform:translateZ(0)]"
-          style={{
-            width: imageWidth,
-            height: imageHeight,
-          }}
-        /> */}
+        
+         
+        
 
-        {displayOverlayContent && overlayContent && (
+        {displayOverlayContent && title && (
           <motion.div
-            className="absolute top-0 left-0 z-[2] will-change-transform [transform:translateZ(30px)]"
+            className="  text-black  text-sm "
+            style={{ pointerEvents: "none" }}
           >
-            <p>
-            We usually collaborate with writers and designers to ensure all parts of a website fit together, while still looking amazing. In short the web designers are the ones who ensures our website you see online looks good and is easy to navigate.Here we also have frontend and backend developers who always keeps a check and responsible for everything you see on website. We wear many hats for the advancement of our website.
-            </p>
-            {/* {overlayContent} */}
+<div class=" px-4 py-2 border-opacity-60 text-center">
+<h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-3"><strong>{title}</strong></h2>
+<p class="leading-relaxed text-sm text-grey">{para}</p>
+</div>  
           </motion.div>
         )}
       </motion.div>
 
-      {showTooltip && (
-        <motion.figcaption
-          className="pointer-events-none absolute left-0 top-0 rounded-[4px] bg-white px-[10px] py-[4px] text-[10px] text-[#2d2d2d] opacity-0 z-[3] hidden sm:block"
-          style={{
-            x,
-            y,
-            opacity,
-            rotate: rotateFigcaption,
-          }}
-        >
-          {captionText}
-        </motion.figcaption>
-      )}
+
     </figure>
   );
 }
