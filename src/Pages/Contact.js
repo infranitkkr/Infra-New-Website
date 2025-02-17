@@ -1,44 +1,118 @@
 import React from 'react'
 import FadeContent from '../Animations/FadeContent';
+import AnimatedContent from '../Animations/AnimatedContent'
+import Particle from '../Animations/Particle';
+import { useState } from 'react';
+import axios from 'axios';
+import { useForm } from 'react-hook-form';
+
 
 
 export default function Contact() {
-    const handleEmailClick = () => {
-        const email = 'infrastructure@nitkkr.ac.in';
-        const subject = '';
-        const body = '';
 
-        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        const gmailUrl = 'https://mail.google.com';
+    const form = useForm()
+    const { register, handleSubmit, formState, reset, watch } = form;
+    const { errors } = formState;
 
-        if (isMobile) {
-            window.location.href = mailtoUrl;
-        } else {
-            window.open(gmailUrl, '_blank');
-        }
+    const [formData, setFormData] = useState({
+        name: '',
+        phone: '',
+        message: '',
+    });
+
+
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        axios.post('/api/sendMail', formData)
+            .then(response => {
+                alert('Message sent successfully!');
+                reset();
+            })
+            .catch(error => {
+                console.error('There was an error sending the message!', error);
+            });
     };
 
-
     return (
-        <div className='flex flex-col items-center mt-4 sm:h-screen bg-slate-600'>
-            <div className='flex justify-start items-start bg-red-400'>
+        <div className='flex flex-col items-center mt-4  '>
+            <div className='flex justify-start items-start p-3 border-b-2'>
                 <h1 className='text-4xl font-bold w-screen pl-16'>
                     Contact Us
                 </h1>
             </div>
-            <div className='sm:flex sm:flex-row flex-col gap-4 w-full'>
-               
-                <div className='sm:flex-col justify-start items-center sm:w-1/2 w-full bg-amber-500 sm:pl-20 pl-8 mt-4'>
-                <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} >
-                    <h1 className=' sm:text-6xl text-5xl font-extrabold'>
-                        Get In Touch
-                    </h1>
-                    <p>
-                        After brainstorming about insights, get the power to create something real. Bring your ideas to life and share your vision with concrete elements.
-                    </p>
-                </FadeContent>
+            <div className='sm:flex sm:flex-row flex-col gap-4 w-full '>
+                <div className='sm:flex-col justify-start items-center sm:w-1/2 w-full px-8 pt-4  mx-4 mt-4 shadow-lg rounded-2xl'>
+                    <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} >
+                        <h1 className=' sm:text-6xl text-5xl font-extrabold'>
+                            Get In Touch
+                        </h1>
+                        <p className='sm:text-lg text-base mb-4 mt-1 px-2'>
+                            After brainstorming about insights, get the power to create something real. Bring your ideas to life and share your vision with concrete elements.
+                        </p>
+                    </FadeContent>
+
+                    <AnimatedContent>
+
+                        <form className='flex flex-col w-full  rounded-xl p-8'
+                            noValidate
+                            onSubmit={handleSubmit(onSubmit)}
+                        >
+                            <div className='flex flex-col space-y-1 w-full'>
+                                <input
+                                    type='text'
+                                    id='name'
+                                    className='rounded-full w-full h-12 pl-4 border-gray-500 border-1 bg-gray-50'
+                                    placeholder='Name*'
+                                    {...register('name', { required: "Name is required" })}
+                                />
+                                <p className="text-red-500 text-sm pl-4">{errors.name?.message}</p>
+                            </div>
+                            <div className='flex sm:flex-col flex-row justify-between gap-4 my-4 '>
+                                <div className='flex flex-col space-y-1 w-1/2'>
+                                    <input
+                                        type='email'
+                                        id='email'
+                                        className='rounded-full h-12 pl-4 w-full border-gray-500 border-1 bg-gray-50 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none'
+                                        placeholder='Email*'
+                                        {...register('phoneNumber', { required: "Email is required" })}
+                                    />
+                                    <p className="text-red-500 text-sm pl-4">{errors.phoneNumber?.message}</p>
+                                </div>
+                                <div className='flex flex-col space-y-1 w-1/2'>
+                                    <input
+                                        type='number'
+                                        id='phoneNumber'
+                                        className='rounded-full h-12 pl-4 w-full border-gray-500 border-1 bg-gray-50 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none'
+                                        placeholder='Phone Number*'
+                                        {...register('phoneNumber', { required: "Phone Number is required" })}
+                                    />
+                                    <p className="text-red-500 text-sm pl-4">{errors.phoneNumber?.message}</p>
+                                </div>
+                            </div>
+                            <div className='h-60'>
+                                <textarea
+                                    id='message'
+                                    className='h-full border-gray-500 border-1 rounded-3xl bg-gray-50 w-full pl-4 pt-3 align-text-top resize-none'
+                                    placeholder='Your Message Here*'
+                                    {...register('message', { required: "Message is required" })}
+                                />
+                                <p className="text-red-500 text-sm pl-4">{errors.message?.message}</p>
+                            </div>
+                            <div className='mt-8 flex flex-col'>
+                                <p className='text-gray-600'>Your email address will not be published. Required fields are marked*</p>
+                                <button
+                                    type='submit'
+                                    className="mt-2 py-2 px-4 bg-green-600 w-1/3 text-white font-bold rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                >
+                                    Send message
+                                </button>
+                            </div>
+                        </form>
+                    </AnimatedContent>
+
                 </div>
+
                 <div className='flex justify-center items-center sm:w-1/2 w-full h-[90vh] bg-gray-100 sm:m-4 rounded-3xl'>
 
                     <iframe
@@ -47,9 +121,35 @@ export default function Contact() {
                         allowFullScreen=""
                         loading="lazy"
                         className="w-full sm:h-[90vh] h-full rounded-3xl"
-                        />
+                    />
                 </div>
             </div>
+            <div className="relative w-full h-screen flex justify-center items-center bg-black">
+    {/* Particle Background */}
+    <div className="absolute inset-0">
+        <Particle
+            particleColors={['#ffffff', '#ffffff']}
+            particleCount={200}
+            particleSpread={10}
+            speed={0.1}
+            particleBaseSize={100}
+            moveParticlesOnHover={true}
+            alphaParticles={false}
+            disableRotation={false}
+        />
+    </div>
+
+    {/* Foreground Content */}
+    <div className="relative z-10 text-white text-center p-8 bg-opacity-50 rounded-lg">
+        <h1 className="text-4xl font-bold">Social Media</h1>
+        <p className="mt-2 text-lg">Unlock the full potential of social media</p>
+        <p className="mt-2 text-sm">
+            After brainstorming about insights, get the power to create something real. Bring your ideas.
+        </p>
+    </div>
+</div>
+
+
             {/* <section class="text-gray-600 body-font relative">
             <div class="container px-5 py-20 mx-auto">
                 <div class="flex flex-col text-center w-full mb-12">

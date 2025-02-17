@@ -1,5 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom'
 
 const GForm = () => {
 
@@ -8,12 +9,9 @@ const GForm = () => {
   const { register, handleSubmit, formState, reset, watch } = form;
   const { errors } = formState;
 
-  const fields = ["name", "rollno", "email", "number","branch","year"];
+  const fields = ["name", "rollno", "email", "number", "branch", "year"];
   const formData = watch();
-
-  
-
-
+  const navigate = useNavigate();
   const onSubmit = async (data) => {
     try {
       const response = await fetch('https://infra-event-form.onrender.com/submit/gogate', {
@@ -26,6 +24,7 @@ const GForm = () => {
 
       if (response.ok) {
         reset();
+        navigate('success');
         console.log('Form submitted successfully');
       } else {
         console.error('Error submitting form');
@@ -42,7 +41,7 @@ const GForm = () => {
       <div className="flex flex-row items-center justify-center w-full min-h-screen bg-gray-100 p-6">
 
 
-        
+
 
 
         <div className='flex flex-col justify-center items-center w-2/3  m-8 bg-white shadow-lg rounded-lg space-y-4'>
@@ -70,8 +69,8 @@ const GForm = () => {
                 {...register("rollNo", { required: "Roll No is required" })}
               />
               <p className="text-red-500 text-sm">{errors.rollNo?.message}</p>
-            </div>  
-           
+            </div>
+
 
             <div className="flex flex-col space-y-1">
               <label htmlFor="email" className="text-gray-700">Email</label>
@@ -122,14 +121,16 @@ const GForm = () => {
                 type="number"
                 id="year"
                 className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
-                {...register("year", { required: "Year is required",pattern: {
-                  value: /^\d{1}$/,
-                  message: "Year can be 1 , 2 , 3 , 4",
-                } })}
+                {...register("year", {
+                  required: "Year is required", pattern: {
+                    value: /^\d{1}$/,
+                    message: "Year can be 1 , 2 , 3 , 4",
+                  }
+                })}
               />
               <p className="text-red-500 text-sm">{errors.year?.message}</p>
-            </div>  
-                
+            </div>
+
 
 
             <div className='flex justify-between'>

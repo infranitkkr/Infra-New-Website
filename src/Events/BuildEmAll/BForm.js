@@ -1,6 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
-
+import { useNavigate } from 'react-router-dom'
 const BForm = () => {
 
 
@@ -12,7 +12,7 @@ const BForm = () => {
   const formData = watch();
 
 
-
+const navigate = useNavigate();
   const onSubmit = async (data) => {
     try {
       const response = await fetch('https://infra-event-form.onrender.com/submit/build-em-all', {
@@ -25,6 +25,7 @@ const BForm = () => {
 
       if (response.ok) {
         reset();
+        navigate('success');
         console.log('Form submitted successfully');
       } else {
         console.error('Error submitting form');

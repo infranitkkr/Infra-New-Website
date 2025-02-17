@@ -1,5 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom'
 
 const MForm = () => {
 
@@ -10,9 +11,7 @@ const MForm = () => {
 
   const fields = ["teamName", "teamLeader", "teamLeaderRollNo", "email", "number", "teamMember2", "teamMember2RollNo", "teamMember3", "teamMember3RollNo"];
   const formData = watch();
-
-
-
+  const navigate = useNavigate();
   const onSubmit = async (data) => {
     try {
       const response = await fetch('https://infra-event-form.onrender.com/submit/mixcrete', {
@@ -25,6 +24,7 @@ const MForm = () => {
 
       if (response.ok) {
         reset();
+        navigate('success');
         console.log('Form submitted successfully');
       } else {
         console.error('Error submitting form');

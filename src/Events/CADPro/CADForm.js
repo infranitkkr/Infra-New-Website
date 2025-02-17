@@ -1,6 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
-
+import { useNavigate } from 'react-router-dom'
 const CADForm = () => {
 
 
@@ -11,7 +11,7 @@ const CADForm = () => {
   const fields = ["teamName", "teamLeader", "email", "number", "teamLeaderRollNo", "teamMember2", "teamMember2RollNo", "teamMember3RollNo", "teamMember3"];
   const formData = watch();
 
-
+  const navigate = useNavigate();
   const onSubmit = async (data) => {
     try {
       const response = await fetch('https://infra-event-form.onrender.com/submit/cadpro', {
@@ -24,6 +24,7 @@ const CADForm = () => {
 
       if (response.ok) {
         reset();
+        navigate('success');
         console.log('Form submitted successfully');
       } else {
         console.error('Error submitting form');

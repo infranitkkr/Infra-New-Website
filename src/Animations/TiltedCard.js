@@ -1,10 +1,9 @@
-// TiltedCard.js
 import { useRef, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 const springValues = {
-  damping: 30,
-  stiffness: 100,
+  damping: 20,
+  stiffness: 200,
   mass: 2,
 };
 
@@ -12,16 +11,16 @@ export default function TiltedCard({
   imageSrc,
   altText = "Tilted card image",
   captionText = "",
-    containerHeight = "350px",    
-    containerWidth = "400px",
-    imageHeight = "350px",
-    imageWidth = "400px",
+  containerHeight = "350px",
+  containerWidth = "400px",
+  imageHeight = "350px",
+  imageWidth = "400px",
   scaleOnHover = 1.1,
-  rotateAmplitude = 14,
+  rotateAmplitude = 18,
   showMobileWarning = true,
   showTooltip = true,
   title = null,
-  para=null,
+  para = null,
   displayOverlayContent = false,
 }) {
   const ref = useRef(null);
@@ -32,7 +31,7 @@ export default function TiltedCard({
   const scale = useSpring(1, springValues);
   const opacity = useSpring(0);
   const rotateFigcaption = useSpring(0, {
-    stiffness: 350,
+    stiffness: 200,
     damping: 30,
     mass: 1,
   });
@@ -84,8 +83,6 @@ export default function TiltedCard({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-     
-
       <motion.div
         className="relative [transform-style:preserve-3d]  overflow-hidden shadow"
         style={{
@@ -96,24 +93,18 @@ export default function TiltedCard({
           scale,
         }}
       >
-        
-         
-        
-
         {displayOverlayContent && title && (
           <motion.div
             className="  text-black  text-sm "
             style={{ pointerEvents: "none" }}
           >
-<div class=" px-4 py-2 border-opacity-60 text-center">
-<h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-3"><strong>{title}</strong></h2>
-<p class="leading-relaxed text-sm text-grey">{para}</p>
-</div>  
+            <div class=" px-4 py-2 border-opacity-60 text-center">
+              <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-3"><strong>{title}</strong></h2>
+              <p class="leading-relaxed text-sm text-grey">{para}</p>
+            </div>
           </motion.div>
         )}
       </motion.div>
-
-
     </figure>
   );
 }

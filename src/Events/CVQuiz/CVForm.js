@@ -1,5 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom'
 
 const CVForm = () => {
 
@@ -10,10 +11,7 @@ const CVForm = () => {
 
   const fields = ["name", "rollno", "email", "number","branch","year"];
   const formData = watch();
-
-  
-
-
+  const navigate = useNavigate();
   const onSubmit = async (data) => {
     try {
       const response = await fetch('https://infra-event-form.onrender.com/submit/cvquiz', {
@@ -26,6 +24,7 @@ const CVForm = () => {
 
       if (response.ok) {
         reset();
+        navigate('success');
         console.log('Form submitted successfully');
       } else {
         console.error('Error submitting form');

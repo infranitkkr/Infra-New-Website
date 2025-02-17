@@ -1,5 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom'
 
 const CForm = () => {
 
@@ -17,7 +18,7 @@ const CForm = () => {
   ).length;
   const progress = (filledFields / fields.length) * 100;
 
-
+  const navigate = useNavigate();
   const onSubmit = async (data) => {
     try {
       const response = await fetch('https://infra-event-form.onrender.com/submit/mixcrete', {
@@ -30,6 +31,7 @@ const CForm = () => {
 
       if (response.ok) {
         reset();
+        navigate('success');
         console.log('Form submitted successfully');
       } else {
         console.error('Error submitting form');

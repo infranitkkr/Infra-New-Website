@@ -26,7 +26,7 @@ const PForm = () => {
 
       if (response.ok) {
         reset();
-        navigate('/success');
+        navigate('success');
         console.log('Form submitted successfully');
       } else {
         console.error('Error submitting form');
