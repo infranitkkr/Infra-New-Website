@@ -38,7 +38,7 @@ const RollingGallery = ({
   // 3D geometry
   const cylinderWidth = isScreenSizeSm ? 1100 : 1800;
   const faceCount = images.length;
-  const faceWidth = (cylinderWidth / faceCount) * 1.5;
+  const faceWidth = (cylinderWidth / faceCount) * 1.2;
   const radius = cylinderWidth / (2 * Math.PI);
 
   // Framer Motion
@@ -106,7 +106,7 @@ const RollingGallery = ({
   };
 
   return (
-    <div className="relative h-2/5 sm:h-2/3 w-full overflow-hidden">
+    <div className="relative w-full overflow-hidden h-2/5 sm:h-2/3">
       <div
         className="absolute top-0 left-0 h-full w-[28px] z-10"
         style={{
@@ -122,7 +122,7 @@ const RollingGallery = ({
         }}
       />
 
-      <div className="flex h-full items-center justify-center [perspective:1000px] [transform-style:preserve-3d]">
+      <div className="flex h-full w-full items-center justify-center [perspective:1000px] [transform-style:preserve-3d]">
         <motion.div
           drag="x"
           dragElastic={0}
@@ -138,12 +138,12 @@ const RollingGallery = ({
             width: cylinderWidth,
             transformStyle: "preserve-3d",
           }}
-          className="flex min-h-[200px] cursor-grab items-center justify-center [transform-style:preserve-3d]"
+          className="flex  min-h-[200px] lg:min-h-[350px] md:min-h-[350px] w-full cursor-grab items-center justify-center [transform-style:preserve-3d] "
         >
           {images.map((url, i) => (
             <div
               key={i}
-              className="group absolute flex h-fit items-center justify-center 
+              className="group absolute flex  w-full lg:h-[210px] md:h-[230px]  items-center justify-center 
                [backface-visibility:hidden]"
               style={{
                 width: `${faceWidth}px`,
@@ -154,7 +154,7 @@ const RollingGallery = ({
               <img
                 src={url}
                 alt="gallery"
-                className="pointer-events-none h-auto w-full rounded-[15px] border-[3px] border-white object-cover
+                className="pointer-events-none w-full h-full rounded-[15px] border-[3px] border-white object-cover
                            transition-transform duration-300 ease-out group-hover:scale-105"
               />
             </div>

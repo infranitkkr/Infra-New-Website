@@ -4,7 +4,20 @@ import Component from '../Component';
 import RollingGallery from '../../Animations/RollingGallery';
 
 
+import image1 from "../zGallery/1.jpg";
+import image2 from "../zGallery/2.jpg";
+import image3 from "../zGallery/3.jpg";
+import image4 from "../zGallery/4.jpg";
+
 const Wildflower = () => {
+
+  const images=[
+        image3,
+        image1,
+        image2,
+        image4,
+  ];
+
   const event = {
     name: "Wildflower",
     about:
@@ -34,7 +47,7 @@ const Wildflower = () => {
         <Carousel />
       </div> */}
       <div>
-        <RollingGallery autoplay={true} pauseOnHover={true}/>
+        <RollingGallery autoplay={true} pauseOnHover={true} images={images}/>
       </div>
       <div>
         <Component event={event} />

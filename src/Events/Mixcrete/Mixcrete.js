@@ -25,8 +25,8 @@ const Mixcrete = () => {
           "\n1. Proportioning Accuracy: Evaluate how precisely your team adheres to the prescribed mix design.\n2. Strength Achievement: The concrete cube must meet the specified strength criteria, reflecting the quality of your mix.\n3. Execution Skills: Assess the precision in mixing, casting, and finishing of the cube.\n4. Team Coordination: Consider the effectiveness of your collaboration and time management throughout the event.",
           
         aim:
-          "MixCrete is designed to provide a practical platform for students to apply their civil engineering knowledge in a real-world scenario. By participating, you will refine your skills in concrete mix design and learn the importance of teamwork, precision, and innovation in construction. This event aims to bridge theoretical learning with practical application, preparing you for future challenges in civil engineering and construction management."
-      };
+          "MixCrete is designed to provide a practical platform for students to apply their civil engineering knowledge in a real-world scenario. By participating, you will refine your skills in concrete mix design and learn the importance of teamwork, precision, and innovation in construction. This event aims to bridge theoretical learning with practical application, preparing you for future challenges in civil engineering and construction management.",
+        };
     return (
         <div>
             <div>

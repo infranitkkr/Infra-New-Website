@@ -26,6 +26,16 @@ export const teacher = [
 export const workshop = [
 
     {
+        name: "Artificial Intelligence",
+        title: "Unleash Your AI Potential",
+        content: "Unlock the potential of artificial intelligence in this transformative workshop. Engage with industry experts to explore AI fundamentals, machine learning, and deep learning techniques. Experience interactive projects that inspire innovation and practical application. This immersive learning journey empowers you to elevate your professional skills, gain a competitive edge, and shape the future of technology with lasting impact for sustainable success.",
+        image: yhills
+      }
+      
+      
+,
+
+    {
         name: "Designing Software",
         title: "ETABS",
         content: "An online workshop on ETABS, a structural analysis and design software was also conducted with the assistance of infrastructure society for the students of civil engineering. \n \n Throughout the workshop, participants were engaged through interactive discussions, examples, and exercises. This not only helped participants to better understand the concepts, but also made the workshop more enjoyable and memorable.",
@@ -87,8 +97,15 @@ export const webinar = [
 
 export const seminar = [
     {
+        name:"Unlocking Opportunites and  Career Guidance",
+        title:"Made easy",
+        content:"Join NIT Kurukshetra's society Infrastructure, in collaboration with Made Easy, for an inspiring seminar on GATE and government exam preparation featuring renowned educationalist Mr. Jitendra Tiwari. With over 24 years of mentoring experience and 1600+ seminars at premier institutions, his session focuses on advanced memorization techniques and insightful career guidance to empower your academic journey.",
+        image:madeeasy
+  },
+
+    {
         name : "Guaidance And Learning",
-        title: "MadeEasy",
+        title: "Made Easy",
         content : "Infrastructure also organised a Seminar in collaboration with Made Easy which is a dominant player in the field of providing guidance, mentorship and  coaching for the Civil Services Examination, GATE and the Engineering  Services Examination. The Seminar had its focus on in and out of GATE and  other competitive exams; various career opportunities, dos and don'ts to  become topper, why and why not approach, many arrows in one quiver, art of  making effective notes, how to face different phases of recruitment (Written  test / GD/ Interview).",
         image: madeeasy
     },
