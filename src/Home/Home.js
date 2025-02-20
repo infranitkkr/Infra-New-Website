@@ -16,7 +16,7 @@ export default function Home() {
       <div>
         <Banner />
         <div className="container relative items-center pt-5 mx-auto lg:flex">
-          <div className="w-full h-auto mx-auto lg:w-1/2 lg:pr-10 xl:pr-0">
+          <div className="w-full mx-auto h-250px lg:my-10 lg:w-1/2 lg:pr-10 xl:pr-0 sm:mx-6">
               <RollingModel />
           </div>
 

@@ -35,18 +35,18 @@ const RollingGallery = ({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // 3D geometry
+ 
   const cylinderWidth = isScreenSizeSm ? 1100 : 1800;
   const faceCount = images.length;
   const faceWidth = (cylinderWidth / faceCount) * 1.2;
   const radius = cylinderWidth / (2 * Math.PI);
 
-  // Framer Motion
+  
   const dragFactor = 0.05;
   const rotation = useMotionValue(0);
   const controls = useAnimation();
 
-  // Convert rotation -> 3D transform
+ 
   const transform = useTransform(
     rotation,
     (val) => `rotate3d(0,1,0,${val}deg)`
@@ -124,12 +124,8 @@ const RollingGallery = ({
 
       <div className="flex h-full w-full items-center justify-center [perspective:1000px] [transform-style:preserve-3d]">
         <motion.div
-          drag="x"
-          dragElastic={0}
-          onDrag={handleDrag}
-          onDragEnd={handleDragEnd}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
+          
+        
           animate={controls}
           onUpdate={handleUpdate}
           style={{
