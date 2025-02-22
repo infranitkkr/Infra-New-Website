@@ -30,7 +30,7 @@ const About = () => {
                             direction="horizontal"
                             reverse={true}
                         >
-                            <div className="p-2 border-gray-50 shadow-xl rounded-2xl">
+                            <div className="p-3 border-gray-50 shadow-xl rounded-2xl ">
                                 <p className="font-normal text-base leading-6 text-gray-600 mt-4">One man's 'Magic' is another's engineering, thereupon we the team of Infrastructure Society, The Formal Technical Society of the Department of Civil Engineering, National Institute of Technology, Kurukshetra ceaselessly pouring our efforts to succour the transformation of magic in your dreams to astounding reality. Put in place with motto of fostering the talents of countrywide 'Fledgling engineers' endeavouring technical assistance, on the 26th day of August 1998, unfailingly setting a new benchmark, whensoever standing up for some new initiative.
                                 </p>
                                 <p className="font-normal text-base leading-6 text-gray-600 mt-6">From sowing the seeds of research in brainiacs to fine-tuning the technical skills and field knowledge, The society has been, so far, successful in bridging the gap between classrooms and field with a team of bright minds fused together exhibiting inimitable unity heedless of the differences. Sculpturing the team's strive in words, copious events are organised at institute and national level taking vision of dreams, applying magic of science and mathematics and knowledge of nature's material to create the world that never has been.</p>

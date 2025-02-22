@@ -11,7 +11,7 @@ const AboutUs = () => {
       para:
         "We usually collaborate with writers and designers to ensure all parts of a website fit together, while still looking amazing. In short the web designers are the ones who ensures our website you see online looks good and is easy to navigate.Here we also have frontend and backend developers who always keeps a check and responsible for everything you see on website. We wear many hats for the advancement of our website.",
       
-    },
+    },  
     {
       id: 2,
       title: "Content",
