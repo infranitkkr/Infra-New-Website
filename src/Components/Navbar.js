@@ -121,10 +121,16 @@ export default function Navbar() {
                     <div className="flex justify-start lg:w-0 lg:flex-1">
                         <Link to="/" className='flex justify-start'>
                             <img
-                                className=" h-12 sm:h-16 w-auto"
-                                src={require('../images/white-logo.png')}
+                                className=" h-12 sm:h-[65px] w-auto "
+                                src={require('../images/logo3.png')}
                                 alt=""
                             />
+                             <img
+                                className=" h-12 sm:h-[65px] w-auto"
+                                src={require('../images/logo4.png')}
+                                alt=""
+                            />
+                           
                         </Link>
                     </div>
                     <div className="-mr-2 -my-2 md:hidden">

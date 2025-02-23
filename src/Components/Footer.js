@@ -5,13 +5,18 @@ const Footer = () => {
     return (
         <div className="mx-auto container xl:px-20 lg:px-12 sm:px-6 px-4 py-8 border-t-2 mt-10 border-gray-100">
             <div className="flex flex-col items-center justify-center">
-                <div>
-                    <img
-                        className="h-16 w-auto sm:h-20"
-                        src={require('../images/white-logo.png')}
-                        alt=""
-                    />
-                </div>
+                <div className="flex">
+                <img
+                                className=" h-12 sm:h-[75px] w-auto "
+                                src={require('../images/logo3.png')}
+                                alt=""
+                            />
+                             <img
+                                className=" h-12 sm:h-[75px] w-auto"
+                                src={require('../images/logo4.png')}
+                                alt=""
+                            />
+                </div>  
                 <div className="flex flex-wrap sm:gap-10 gap-8 items-center justify-center mt-8">
                     <p className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800"><Link target={'_blank'} to="/our-allies#developers">Developers</Link></p>
                     <p className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800"><a target={'_blank'} href="https://forms.gle/WJcFN8gLYw7ALs7H9">Suggest for site</a></p>
