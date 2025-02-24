@@ -1,9 +1,11 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
 
 const CVForm = () => {
 
+  const [serverError, setServerError] = useState("");
 
   const form = useForm()
   const { register, handleSubmit, formState, reset, watch } = form;
@@ -14,24 +16,30 @@ const CVForm = () => {
   const navigate = useNavigate();
   const onSubmit = async (data) => {
     try {
-      const response = await fetch('https://infra-event-form.onrender.com/submit/cvquiz', {
+      console.log("data", data);
+      const response = await fetch('http://localhost:3001/submit/cvquiz', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type':'application/json',
         },
         body: JSON.stringify(data),
       });
-
+      console.log(response);
+      const result = await response.json();
       if (response.ok) {
         reset();
+          
         navigate('success');
+        setServerError("");
         console.log('Form submitted successfully');
       } else {
-        console.error('Error submitting form');
+      
+        setServerError(result.message || 'Error submitting form');
       }
     } catch (error) {
       console.error('Error:', error);
-    }
+
+    } 
   };
   return (
     <div className=' flex flex-col items-center justify-center '>
@@ -145,6 +153,11 @@ const CVForm = () => {
                 Submit
               </button>
             </div>
+            {serverError && (
+              <div className="text-red-500 text-sm mt-4">
+                  {serverError}
+              </div>
+            )}  
           </form>
         </div>
       </div>

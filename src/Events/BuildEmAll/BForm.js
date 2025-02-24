@@ -1,8 +1,10 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
 const BForm = () => {
 
+  const [serverError, setServerError] = useState("");
 
   const form = useForm()
   const { register, handleSubmit, formState, reset, watch } = form;
@@ -10,29 +12,36 @@ const BForm = () => {
 
   const fields = ["teamName", "email", "number", "teamMember1", "teamMember2", "teamMember1RollNo", "teamMember2RollNo"];
   const formData = watch();
+  const navigate = useNavigate();
 
 
-const navigate = useNavigate();
+
   const onSubmit = async (data) => {
     try {
-      const response = await fetch('https://infra-event-form.onrender.com/submit/build-em-all', {
+      const response = await fetch('http://localhost:3001/submit/build-em-All', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type':'application/json',
         },
         body: JSON.stringify(data),
       });
 
+      const result = await response.json();
       if (response.ok) {
         reset();
+          
         navigate('success');
+        setServerError("");
         console.log('Form submitted successfully');
       } else {
-        console.error('Error submitting form');
+      
+        setServerError(result.message || 'Error submitting form');
       }
     } catch (error) {
       console.error('Error:', error);
-    }
+
+    } 
+
   };
   return (
     <div className=' flex flex-col items-center justify-center '>
@@ -136,10 +145,16 @@ const navigate = useNavigate();
               <button
                 type='submit'
                 className="mt-4 py-2 px-4 bg-green-500 text-white font-bold rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
+              > 
                 Submit
               </button>
             </div>
+            {serverError && (
+              <div className="text-red-500 text-sm mt-4">
+                  {serverError}
+              </div>
+            )}  
+
           </form>
         </div>
       </div>
