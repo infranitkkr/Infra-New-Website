@@ -5,11 +5,10 @@
     <meta http-equiv="refresh" content="0; URL=./index.html">
     <title>Redirecting...</title>
     <script>
-      // Optionally, if you want to preserve the original path,
-      // you can use JavaScript to pass that information.
-      var currentPath = window.location.pathname;
-      // You can store the path in localStorage or handle it as needed.
-      // localStorage.setItem("redirectPath", currentPath);
+      // Save the current path to localStorage
+      localStorage.setItem("redirectPath", window.location.pathname);
+      // Redirect to the index.html
+      window.location.replace("/");
     </script>
   </head>
   <body>
