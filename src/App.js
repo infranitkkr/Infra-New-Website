@@ -17,7 +17,7 @@ import Workshop from "./Pages/Workshop";
 import Explore from "./Pages/Explore";
 import logo from "./images/white-logo2.png";
 import Dashboard from "./firebase-google-drive-clone/src/components/google-drive/Dashboard";
-
+import ThemePage from "./Pages/theme.js";
 
 
 import MForm from "./Events/Mixcrete/MForm.js";
@@ -41,7 +41,7 @@ import Intervista from "./Events/Intervista/Intervista.js"
 import Mixcrete from "./Events/Mixcrete/Mixcrete.js";
 import Planning from "./Events/Planning/Planning.js"
 import Wildflower from "./Events/Wildflower/Wildflower.js"
-
+import Olampion from "./Events/OlampionOlampic/OlampionOlampic.js"
 import Registered from "./Events/Registered.js";
 
 function App() {
@@ -67,6 +67,7 @@ function App() {
     { name: "intervista", component: Intervista, form: IForm },
     { name: "mixcrete", component: Mixcrete, form: MForm },
     { name: "planning", component: Planning, form: PForm },
+    {name: "opinion-olampic",component:Olampion, form: PForm},
     { name: "wildflower", component: Wildflower, form: null },
   ];
 
@@ -122,6 +123,7 @@ function App() {
         <Route path="/study-material" exact element={<Dashboard />} />
         <Route path="/folder/:folderId" element={<Dashboard />} />
         <Route path="/" exact element={<Home />} />
+        <Route path="/theme" exact element={<ThemePage />} />
 
         {/* dynamic routes for events */}
         <Route path="/events/:eventName" element={<EventPage />} />

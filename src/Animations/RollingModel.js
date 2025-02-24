@@ -9,7 +9,6 @@ function AnimatedModel({ url, position = [0, 0, 0], scale = [2, 2, 2] }) {
 
   useFrame((_, delta) => {
     if (modelRef.current) {
-      // Rotate model on its z-axis
       modelRef.current.rotation.z += delta * 0.9;
     }
   });

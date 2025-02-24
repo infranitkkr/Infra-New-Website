@@ -7,12 +7,12 @@ import GradientText from '../Animations/GradientText';
 export default function Events() {
   return (
     <div>
-      <div className="container mx-auto flex flex-col items-center py-12 sm:py-24">
-        <div className="w-11/12 sm:w-2/3 lg:flex justify-center items-center flex-col  mb-5 sm:mb-10">
-          <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center text-gray-800 font-black leading-7 md:leading-10">
+      <div className="container flex flex-col items-center py-12 mx-auto sm:py-24">
+        <div className="flex-col items-center justify-center w-11/12 mb-5 sm:w-2/3 lg:flex sm:mb-10">
+          <h1 className="text-3xl font-black leading-7 text-center text-gray-800 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl md:leading-10">
             Techspardha
           </h1>
-          <p className="mt-5 sm:mt-10 lg:w-10/12 text-gray-400 font-normal text-justify text-sm sm:text-lg">
+          <p className="mt-5 text-sm font-normal text-justify text-gray-400 sm:mt-10 lg:w-10/12 sm:text-lg">
             Techspardha is a national level annual techno-managerial students’
             festival of National Institute of Technology, Kurukshetra. It
             started in 1995 as "Technospect" (later changed to Literati). The
@@ -33,13 +33,13 @@ export default function Events() {
 
             <li>
               <Link to={"/events/archicapture"}>
-                <div className="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg grid grid-cols-2 items-center">
-                  <div className="sm:text-lg text-sm justify-self-start">Archicapture</div>
+                <div className="grid items-center grid-cols-2 p-4 text-sm cursor-pointer hover:bg-gray-50 sm:text-lg">
+                  <div className="text-sm sm:text-lg justify-self-start">Archicapture</div>
                   {/* <GradientText
                     colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                     animationSpeed={10}
                     showBorder={false}
-                    className="custom-class sm:text-lg text-sm justify-self-end"
+                    className="text-sm custom-class sm:text-lg justify-self-end"
                   >
                     Register Here
                   </GradientText> */}
@@ -51,13 +51,13 @@ export default function Events() {
 
             <li>
               <Link to={"/events/build-em-all"}>
-              <div className="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg grid grid-cols-2 items-center">
-                  <div className="sm:text-lg text-sm justify-self-start">Build-Em-All</div>
+              <div className="grid items-center grid-cols-2 p-4 text-sm cursor-pointer hover:bg-gray-50 sm:text-lg">
+                  <div className="text-sm sm:text-lg justify-self-start">Build-Em-All</div>
                   <GradientText
                     colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                     animationSpeed={10}
                     showBorder={false}
-                    className="custom-class sm:text-lg text-sm justify-self-end"
+                    className="text-sm custom-class sm:text-lg justify-self-end"
                   >
                     Register Here
                   </GradientText>
@@ -66,13 +66,13 @@ export default function Events() {
             </li>
             <li>
               <Link to={"/events/cadpro"}>
-              <div className="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg grid grid-cols-2 items-center">
-                  <div className="sm:text-lg text-sm justify-self-start">CAD Pro</div>
+              <div className="grid items-center grid-cols-2 p-4 text-sm cursor-pointer hover:bg-gray-50 sm:text-lg">
+                  <div className="text-sm sm:text-lg justify-self-start">CAD Pro</div>
                   <GradientText
                     colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                     animationSpeed={10}
                     showBorder={false}
-                    className="custom-class sm:text-lg text-sm justify-self-end"
+                    className="text-sm custom-class sm:text-lg justify-self-end"
                   >
                     Register Here
                   </GradientText>
@@ -81,13 +81,13 @@ export default function Events() {
             </li>
             {/* <li>
               <Link to={"/events/civiera"}>
-                <div className="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg grid grid-cols-2 items-center">
-                  <div className="sm:text-lg text-sm justify-self-start">Civiera</div>
+                <div className="grid items-center grid-cols-2 p-4 text-sm cursor-pointer hover:bg-gray-50 sm:text-lg">
+                  <div className="text-sm sm:text-lg justify-self-start">Civiera</div>
                   <GradientText
                     colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                     animationSpeed={10}
                     showBorder={false}
-                    className="custom-class sm:text-lg text-sm justify-self-end"
+                    className="text-sm custom-class sm:text-lg justify-self-end"
                   >
                     Register Here
                   </GradientText>
@@ -96,13 +96,13 @@ export default function Events() {
             </li> */}
             <li>
               <Link to={"/events/cvquiz"}>
-              <div className="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg grid grid-cols-2 items-center">
-                  <div className="sm:text-lg text-sm justify-self-start">CV Quiz</div>
+              <div className="grid items-center grid-cols-2 p-4 text-sm cursor-pointer hover:bg-gray-50 sm:text-lg">
+                  <div className="text-sm sm:text-lg justify-self-start">CV Quiz</div>
                   <GradientText
                     colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                     animationSpeed={10}
                     showBorder={false}
-                    className="custom-class sm:text-lg text-sm justify-self-end"
+                    className="text-sm custom-class sm:text-lg justify-self-end"
                   >
                     Register Here
                   </GradientText>
@@ -111,13 +111,13 @@ export default function Events() {
             </li>
             <li>
               <Link to={"/events/gogate"}>
-              <div className="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg grid grid-cols-2 items-center">
-                  <div className="sm:text-lg text-sm justify-self-start">Go Gate</div>
+              <div className="grid items-center grid-cols-2 p-4 text-sm cursor-pointer hover:bg-gray-50 sm:text-lg">
+                  <div className="text-sm sm:text-lg justify-self-start">Go Gate</div>
                   <GradientText
                     colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                     animationSpeed={10}
                     showBorder={false}
-                    className="custom-class sm:text-lg text-sm justify-self-end"
+                    className="text-sm custom-class sm:text-lg justify-self-end"
                   >
                     Register Here
                   </GradientText>
@@ -127,13 +127,13 @@ export default function Events() {
             </li>
             <li>
               <Link to={"/events/intervista"}>
-              <div className="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg grid grid-cols-2 items-center">
-                  <div className="sm:text-lg text-sm justify-self-start">Invervista</div>
+              <div className="grid items-center grid-cols-2 p-4 text-sm cursor-pointer hover:bg-gray-50 sm:text-lg">
+                  <div className="text-sm sm:text-lg justify-self-start">Invervista</div>
                   {/* <GradientText
                     colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                     animationSpeed={10}
                     showBorder={false}
-                    className="custom-class sm:text-lg text-sm justify-self-end"
+                    className="text-sm custom-class sm:text-lg justify-self-end"
                   >
                     Register Here
                   </GradientText> */}
@@ -142,13 +142,29 @@ export default function Events() {
             </li>
             <li>
               <Link to={"/events/mixcrete"}>
-              <div className="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg grid grid-cols-2 items-center">
-                  <div className="sm:text-lg text-sm justify-self-start">Mixcrete</div>
+              <div className="grid items-center grid-cols-2 p-4 text-sm cursor-pointer hover:bg-gray-50 sm:text-lg">
+                  <div className="text-sm sm:text-lg justify-self-start">Mixcrete</div>
                   <GradientText
                     colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                     animationSpeed={10}
                     showBorder={false}
-                    className="custom-class sm:text-lg text-sm justify-self-end"
+                    className="text-sm custom-class sm:text-lg justify-self-end"
+                  >
+                    Register Here
+                  </GradientText>
+                </div>
+              </Link>
+            </li>
+            
+            <li>
+              <Link to={"/events/opinion-olampic"}>
+              <div className="grid items-center grid-cols-2 p-4 text-sm cursor-pointer hover:bg-gray-50 sm:text-lg">
+                  <div className="text-sm sm:text-lg justify-self-start">Opinion Olampic</div>
+                  <GradientText
+                    colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                    animationSpeed={10}
+                    showBorder={false}
+                    className="text-sm custom-class sm:text-lg justify-self-end"
                   >
                     Register Here
                   </GradientText>
@@ -157,13 +173,13 @@ export default function Events() {
             </li>
             <li>
               <Link to={"/events/planning"}>
-              <div className="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg grid grid-cols-2 items-center">
-                  <div className="sm:text-lg text-sm justify-self-start">Planning</div>
+              <div className="grid items-center grid-cols-2 p-4 text-sm cursor-pointer hover:bg-gray-50 sm:text-lg">
+                  <div className="text-sm sm:text-lg justify-self-start">Planning</div>
                   <GradientText
                     colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                     animationSpeed={10}
                     showBorder={false}
-                    className="custom-class sm:text-lg text-sm justify-self-end"
+                    className="text-sm custom-class sm:text-lg justify-self-end"
                   >
                     Register Here
                   </GradientText>
@@ -174,13 +190,13 @@ export default function Events() {
 
             <li>
               <Link to={"/events/wildflower"}>
-              <div className="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg grid grid-cols-2 items-center">
-                  <div className="sm:text-lg text-sm justify-self-start">Wild Flower</div>
+              <div className="grid items-center grid-cols-2 p-4 text-sm cursor-pointer hover:bg-gray-50 sm:text-lg">
+                  <div className="text-sm sm:text-lg justify-self-start">Wild Flower</div>
                   {/* <GradientText
                     colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                     animationSpeed={10}
                     showBorder={false}
-                    className="custom-class sm:text-lg text-sm justify-self-end"
+                    className="text-sm custom-class sm:text-lg justify-self-end"
                   >
                     Register Here
                   </GradientText> */}
@@ -211,21 +227,21 @@ export default function Events() {
               mix and design mix they can participate in the event.
             </p>
           </div>
-          <div className="lg:flex items-center w-full lg:w-4/5 ">
+          <div className="items-center w-full lg:flex lg:w-4/5 ">
             <img
-              className="lg:block hidden w-full"
+              className="hidden w-full lg:block"
               src={require("../images/mixcrete.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
             />
             <img
-              className="lg:hidden sm:block hidden w-full h-3/4"
+              className="hidden w-full lg:hidden sm:block h-3/4"
               src={require("../images/mixcrete.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
             />
             <img
-              className="sm:hidden block w-full"
+              className="block w-full sm:hidden"
               src={require("../images/mixcrete.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
@@ -253,21 +269,21 @@ export default function Events() {
               parameters and requirements within the specified time.
             </p>
           </div>
-          <div className="lg:flex items-center w-full lg:w-4/5 ">
+          <div className="items-center w-full lg:flex lg:w-4/5 ">
             <img
-              className="lg:block hidden w-full"
+              className="hidden w-full lg:block"
               src={require("../images/build.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
             />
             <img
-              className="lg:hidden sm:block hidden w-full h-3/4"
+              className="hidden w-full lg:hidden sm:block h-3/4"
               src={require("../images/build.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
             />
             <img
-              className="sm:hidden block w-full"
+              className="block w-full sm:hidden"
               src={require("../images/build.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
@@ -293,21 +309,21 @@ export default function Events() {
               you express your views on a new concept.
             </p>
           </div>
-          <div className="lg:flex items-center w-full lg:w-4/5 ">
+          <div className="items-center w-full lg:flex lg:w-4/5 ">
             <img
-              className="lg:block hidden w-full"
+              className="hidden w-full lg:block"
               src={require("../images/Civiera.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
             />
             <img
-              className="lg:hidden sm:block hidden w-full h-3/4"
+              className="hidden w-full lg:hidden sm:block h-3/4"
               src={require("../images/Civiera.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
             />
             <img
-              className="sm:hidden block w-full"
+              className="block w-full sm:hidden"
               src={require("../images/Civiera.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
@@ -337,21 +353,21 @@ export default function Events() {
               participating for the same.
             </p>
           </div>
-          <div className="lg:flex items-center w-full lg:w-4/5 ">
+          <div className="items-center w-full lg:flex lg:w-4/5 ">
             <img
-              className="lg:block hidden w-full"
+              className="hidden w-full lg:block"
               src={require("../images/about1.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
             />
             <img
-              className="lg:hidden sm:block hidden w-full h-3/4"
+              className="hidden w-full lg:hidden sm:block h-3/4"
               src={require("../images/about1.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
             />
             <img
-              className="sm:hidden block w-full"
+              className="block w-full sm:hidden"
               src={require("../images/about1.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
@@ -385,21 +401,21 @@ export default function Events() {
               renewable resources
             </p>
           </div>
-          <div className="lg:flex items-center w-full lg:w-4/5 ">
+          <div className="items-center w-full lg:flex lg:w-4/5 ">
             <img
-              className="lg:block hidden w-full"
+              className="hidden w-full lg:block"
               src={require("../images/town.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
             />
             <img
-              className="lg:hidden sm:block hidden w-full h-3/4"
+              className="hidden w-full lg:hidden sm:block h-3/4"
               src={require("../images/town.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
             />
             <img
-              className="sm:hidden block w-full"
+              className="block w-full sm:hidden"
               src={require("../images/town.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
@@ -426,21 +442,21 @@ export default function Events() {
               Photography from a new perspective.
             </p>
           </div>
-          <div className="lg:flex items-center w-full lg:w-4/5 ">
+          <div className="items-center w-full lg:flex lg:w-4/5 ">
             <img
-              className="lg:block hidden w-full"
+              className="hidden w-full lg:block"
               src={require("../images/Archicapture.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
             />
             <img
-              className="lg:hidden sm:block hidden w-full h-3/4"
+              className="hidden w-full lg:hidden sm:block h-3/4"
               src={require("../images/Archicapture.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
             />
             <img
-              className="sm:hidden block w-full"
+              className="block w-full sm:hidden"
               src={require("../images/Archicapture.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
@@ -468,21 +484,21 @@ export default function Events() {
               gift
             </p>
           </div>
-          <div className="lg:flex items-center w-full lg:w-4/5 ">
+          <div className="items-center w-full lg:flex lg:w-4/5 ">
             <img
-              className="lg:block hidden w-full"
+              className="hidden w-full lg:block"
               src={require("../images/intervista.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
             />
             <img
-              className="lg:hidden sm:block hidden w-full h-3/4"
+              className="hidden w-full lg:hidden sm:block h-3/4"
               src={require("../images/intervista.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
             />
             <img
-              className="sm:hidden block w-full"
+              className="block w-full sm:hidden"
               src={require("../images/intervista.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
@@ -508,21 +524,21 @@ export default function Events() {
               spread unprecedented excitement through the twilight of the moon.
             </p>
           </div>
-          <div className="lg:flex items-center w-full lg:w-4/5 ">
+          <div className="items-center w-full lg:flex lg:w-4/5 ">
             <img
-              className="lg:block hidden w-full"
+              className="hidden w-full lg:block"
               src={require("../gallery/4.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
             />
             <img
-              className="lg:hidden sm:block hidden w-full h-3/4"
+              className="hidden w-full lg:hidden sm:block h-3/4"
               src={require("../gallery/4.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
             />
             <img
-              className="sm:hidden block w-full"
+              className="block w-full sm:hidden"
               src={require("../gallery/4.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
@@ -550,21 +566,21 @@ export default function Events() {
               winners will get some exciting prizes.
             </p>
           </div>
-          <div className="lg:flex items-center w-full lg:w-4/5 ">
+          <div className="items-center w-full lg:flex lg:w-4/5 ">
             <img
-              className="lg:block hidden w-full"
+              className="hidden w-full lg:block"
               src={require("../images/about2.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
             />
             <img
-              className="lg:hidden sm:block hidden w-full h-3/4"
+              className="hidden w-full lg:hidden sm:block h-3/4"
               src={require("../images/about2.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
             />
             <img
-              className="sm:hidden block w-full"
+              className="block w-full sm:hidden"
               src={require("../images/about2.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
@@ -588,21 +604,21 @@ export default function Events() {
               competence in civil engg. Be a part of this fantastic quiz.
             </p>
           </div>
-          <div className="lg:flex items-center w-full lg:w-4/5 ">
+          <div className="items-center w-full lg:flex lg:w-4/5 ">
             <img
-              className="lg:block hidden w-full"
+              className="hidden w-full lg:block"
               src={require("../images/about1.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
             />
             <img
-              className="lg:hidden sm:block hidden w-full h-3/4"
+              className="hidden w-full lg:hidden sm:block h-3/4"
               src={require("../images/about1.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}
             />
             <img
-              className="sm:hidden block w-full"
+              className="block w-full sm:hidden"
               src={require("../images/about1.jpg")}
               alt="people discussing on board"
               style={{ borderRadius: "15px" }}

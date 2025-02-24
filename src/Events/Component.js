@@ -62,7 +62,7 @@ const Component = ({ event = {} }) => {
         <GradientButton>Register Here</GradientButton>
       </div>
       <div className="flex flex-col justify-center">
-        {/* About Section */}
+   
         <h2 className="pl-3 mt-4 text-xl font-semibold">About the event:</h2>
         <p className="p-4 pt-2 text-justify sm:pl-12 sm:pr-16">
           {isSmallScreen && !readMoreAbout && event.about && event.about.length > TRUNCATE_LENGTH
@@ -78,7 +78,6 @@ const Component = ({ event = {} }) => {
           )}
         </p>
 
-        {/* Team Section */}
         <h2 className="pl-3 mt-4 text-xl font-semibold">Team:</h2>
         <div className="p-4 pt-2 text-justify sm:pl-12 sm:pr-16">
           {isSmallScreen && !readMoreTeam && teamText.length > TRUNCATE_LENGTH ? (
@@ -108,7 +107,7 @@ const Component = ({ event = {} }) => {
           )}
         </div>
 
-        {/* Judging Criteria Section */}
+ 
         <h2 className="pl-3 mt-4 text-xl font-semibold">Judging Criteria:</h2>
         <div className="p-4 pt-2 text-justify sm:pl-12 sm:pr-16">
           {isSmallScreen && !readMoreJudging && judgingText.length > TRUNCATE_LENGTH ? (
@@ -138,7 +137,7 @@ const Component = ({ event = {} }) => {
           )}
         </div>
 
-        {/* Rules Section */}
+       
         {rulesArray.length > 0 && (
           <div>
             <h2 className="pl-3 mt-4 text-xl font-semibold">Rules:</h2>
@@ -206,7 +205,6 @@ const Component = ({ event = {} }) => {
           </div>
         )}
 
-        {/* To be announced Section */}
         <h2 className="pl-3 mt-4 text-xl font-semibold">To be announced:</h2>
         <p className="p-4 pt-2 text-justify sm:pl-12 sm:pr-16">
           {isSmallScreen &&
@@ -227,7 +225,7 @@ const Component = ({ event = {} }) => {
             )}
         </p>
 
-        {/* Aim Section */}
+       
         <h2 className="pl-3 mt-4 text-xl font-semibold">Aim:</h2>
         <p className="p-4 pt-2 text-justify sm:pl-12 sm:pr-16">
           {isSmallScreen &&
