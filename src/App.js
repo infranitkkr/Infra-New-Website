@@ -28,6 +28,7 @@ import CVForm from "./Events/CVQuiz/CVForm.js";
 import GForm from "./Events/GoGate/GForm.js";
 import IForm from "./Events/Intervista/IForm.js";
 import PForm from "./Events/Planning/PForm.js";
+import OForm from "./Events/OpinionOlympics/Oform.js";
 
 
 import Archicapture from "./Events/Archicapture/Archicapture.js"
@@ -39,7 +40,8 @@ import GoGate from "./Events/GoGate/GoGate.js"
 import Intervista from "./Events/Intervista/Intervista.js"
 import Mixcrete from "./Events/Mixcrete/Mixcrete.js";
 import Planning from "./Events/Planning/Planning.js"
-import Wildflower from "./Events/Wildflower/Wildflower.js"
+import OpinionOlympics from "./Events/OpinionOlympics/OpinionOlympics.js";
+import Wildflower from "./Events/Wildflower/Wildflower.js";
 
 import Registered from "./Events/Registered.js";
 import LoadingPage from "./Components/LoadingPage.js";
@@ -67,6 +69,7 @@ function App() {
     { name: "intervista", component: Intervista, form: IForm },
     { name: "mixcrete", component: Mixcrete, form: MForm },
     { name: "planning", component: Planning, form: PForm },
+    {name: "opinion-olympics",component:OpinionOlympics, form: OForm},
     { name: "wildflower", component: Wildflower, form: null },
   ];
 
@@ -108,7 +111,7 @@ function App() {
     <LoadingPage/>
   ) : (
 
-    <Router>
+    <Router basename="/Infra-New-Website">
       <Navbar />
 
       <Routes>

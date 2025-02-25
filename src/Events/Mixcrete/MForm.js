@@ -1,9 +1,10 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
-
+import { useState } from 'react'
 const MForm = () => {
 
+  const [serverError, setServerError] = useState("");
 
   const form = useForm()
   const { register, handleSubmit, formState, reset, watch } = form;
@@ -14,44 +15,38 @@ const MForm = () => {
   const navigate = useNavigate();
   const onSubmit = async (data) => {
     try {
+      console.log("data", data);
       const response = await fetch('https://infra-event-form.onrender.com/submit/mixcrete', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type':'application/json',
         },
         body: JSON.stringify(data),
       });
-
+      console.log(response);
+      const result = await response.json();
       if (response.ok) {
         reset();
+          
         navigate('success');
+        setServerError("");
         console.log('Form submitted successfully');
       } else {
-        console.error('Error submitting form');
+      
+        setServerError(result.message || 'Error submitting form');
       }
     } catch (error) {
       console.error('Error:', error);
-    }
+
+    } 
   };
   return (
     <div className=' flex flex-col items-center justify-center '>
 
       <h1 className="text-3xl font-bold mb-6 text-gray-800 flex justify-center items-center">MixCrete</h1>
 
-      <div className="flex flex-row items-center justify-center w-full min-h-screen bg-gray-100 p-6">
-
-        {/* 
-        <div className=" w-1/3 bg-gray-200 rounded-full  mb-4 p-6">
-          <div className='bg-white h-4 rounded-full transition-all'> 
-            <div
-              className="bg-blue-500 h-4 rounded-full transition-all"
-              style={{ width: `${progress}%` }}
-            ></div>
-          </div>
-        </div> */}
-
-
-        <div className='flex flex-col justify-center items-center w-2/3 m-8 bg-white shadow-lg rounded-lg space-y-4'>
+      <div className="flex flex-row items-center justify-center w-full min-h-screen px-4 bg-gray-100 py-6">
+        <div className='flex flex-col justify-center items-center sm:w-2/3 w-full bg-white shadow-lg rounded-lg space-y-4'>
           <form
             className="flex flex-col w-full p-6 bg-white shadow-lg rounded-lg space-y-4"
             noValidate
@@ -168,6 +163,11 @@ const MForm = () => {
                 Submit
               </button>
             </div>
+            {serverError && (
+              <div className="text-red-500 text-sm mt-4">
+                  {serverError}
+              </div>
+            )}  
           </form>
 
         </div>

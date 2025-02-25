@@ -27,8 +27,8 @@ const About = () => {
                 <div className="flex sm:flex-row flex-col gap-12">
                     <div className="w-full sm:w-[60%] sm:px-[30px]">
                         <AnimatedContent
-                            direction="horizontal"
-                            reverse={true}
+                            direction="vertical"
+                            reverse={false}
                         >
                             <div className="p-3 border-gray-50 shadow-xl rounded-2xl ">
                                 <p className="font-normal text-base leading-6 text-gray-600 mt-4">One man's 'Magic' is another's engineering, thereupon we the team of Infrastructure Society, The Formal Technical Society of the Department of Civil Engineering, National Institute of Technology, Kurukshetra ceaselessly pouring our efforts to succour the transformation of magic in your dreams to astounding reality. Put in place with motto of fostering the talents of countrywide 'Fledgling engineers' endeavouring technical assistance, on the 26th day of August 1998, unfailingly setting a new benchmark, whensoever standing up for some new initiative.
@@ -39,7 +39,7 @@ const About = () => {
                     </div>
                     <div className="items-center w-full sm:w-[40%]">
                     <AnimatedContent
-                            direction="horizontal"
+                            direction="vertical"
                             reverse={false}
                         >
                         <img className="lg:block hidden w-full" src={require('../images/about2.jpg')} alt="people discussing on board" style={{ borderRadius: '15px' }} />

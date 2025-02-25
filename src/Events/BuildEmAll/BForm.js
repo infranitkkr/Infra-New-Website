@@ -1,8 +1,10 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
 const BForm = () => {
 
+  const [serverError, setServerError] = useState("");
 
   const form = useForm()
   const { register, handleSubmit, formState, reset, watch } = form;
@@ -10,42 +12,44 @@ const BForm = () => {
 
   const fields = ["teamName", "email", "number", "teamMember1", "teamMember2", "teamMember1RollNo", "teamMember2RollNo"];
   const formData = watch();
+  const navigate = useNavigate();
 
 
-const navigate = useNavigate();
+
   const onSubmit = async (data) => {
     try {
-      const response = await fetch('https://infra-event-form.onrender.com/submit/build-em-all', {
+      const response = await fetch('https://infra-event-form.onrender.com/submit/build-em-All', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type':'application/json',
         },
         body: JSON.stringify(data),
       });
 
+      const result = await response.json();
       if (response.ok) {
         reset();
+          
         navigate('success');
+        setServerError("");
         console.log('Form submitted successfully');
       } else {
-        console.error('Error submitting form');
+      
+        setServerError(result.message || 'Error submitting form');
       }
     } catch (error) {
       console.error('Error:', error);
-    }
+
+    } 
+
   };
   return (
     <div className=' flex flex-col items-center justify-center '>
 
       <h1 className="text-3xl font-bold mb-6 text-gray-800 flex justify-center items-center">Build-Em-All</h1>
 
-      <div className="flex flex-row items-center justify-center w-full min-h-screen bg-gray-100 p-6">
-
-
-
-
-
-        <div className='flex flex-col justify-center items-center w-2/3  m-8 bg-white shadow-lg rounded-lg space-y-4'>
+      <div className="flex flex-row items-center justify-center w-full min-h-screen px-4 bg-gray-100 py-6">
+        <div className='flex flex-col justify-center items-center sm:w-2/3 w-full bg-white shadow-lg rounded-lg space-y-4'>
           <form
             className="flex flex-col w-full p-6 bg-white shadow-lg rounded-lg space-y-4"
             noValidate
@@ -136,10 +140,16 @@ const navigate = useNavigate();
               <button
                 type='submit'
                 className="mt-4 py-2 px-4 bg-green-500 text-white font-bold rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
+              > 
                 Submit
               </button>
             </div>
+            {serverError && (
+              <div className="text-red-500 text-sm mt-4">
+                  {serverError}
+              </div>
+            )}  
+
           </form>
         </div>
       </div>

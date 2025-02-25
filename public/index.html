@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/infra.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,6 +24,16 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
   <title>Infra</title>
+  <script>
+    // Check if a redirect path exists
+    var redirectPath = localStorage.getItem("redirectPath");
+    if (redirectPath) {
+      // Remove it from storage to prevent infinite loop
+      localStorage.removeItem("redirectPath");
+      // Redirect the React app to the correct route
+      window.history.replaceState(null, null, redirectPath);
+    }
+  </script>
 </head>
 
 <body>

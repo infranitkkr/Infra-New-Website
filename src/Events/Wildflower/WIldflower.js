@@ -30,12 +30,12 @@ const Wildflower = () => {
   };
   return (
     <div>
-      {/* <div>
-        <Carousel />
-      </div> */}
       <div>
-        <RollingGallery autoplay={true} pauseOnHover={true}/>
+        <Carousel />
       </div>
+      {/* <div>
+        <RollingGallery autoplay={true} pauseOnHover={true}/>
+      </div> */}
       <div>
         <Component event={event} />
       </div>

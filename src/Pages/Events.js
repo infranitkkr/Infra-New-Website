@@ -30,23 +30,23 @@ export default function Events() {
       <div class="flex justify-center items-center ">
         <div class="bg-white  rounded-lg sm:w-3/4 w-5/6 shadow-xl ml-0   ">
           <ul class="divide-y  divide-gray-300   w-[100%] ">
-            <li>
+            {/* <li>
               <Link to={"/events/archicapture"}>
                 <div className="p-6 max-sm:pl-0   hover:bg-gray-50 cursor-pointer text-sm sm:text-lg grid grid-cols-2 items-center">
                   <div className="sm:text-lg text-sm justify-self-start">
                     Archicapture
                   </div>
-                  {/* <GradientText
+                  <GradientText
                     colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                     animationSpeed={10}
                     showBorder={false}
                     className="custom-class sm:text-lg text-sm justify-self-end"
                   >
                     Register Here
-                  </GradientText> */}
+                  </GradientText>
                 </div>
               </Link>
-            </li>
+            </li> */}
 
             <li>
               <div className=" hover:bg-gray-50 cursor-pointer text-sm sm:text-lg  flex   items-center">
@@ -79,36 +79,7 @@ export default function Events() {
               </div>
             </li>
 
-            <li>
-              <div className=" hover:bg-gray-50 cursor-pointer text-sm sm:text-lg  flex   items-center">
-                <Link
-                  to={"/events/cadpro"}
-                  className=" w-3/4 sm:text-lg  max-sm:pl-0 text-sm justify-self-start border-r-2 border-gray-300"
-                >
-                  <div className="p-6 max-sm:pl-0"> CAD Pro </div>
-                </Link>
-                {/* <div onClick={() => navigate('build-em-all/form')} className="border-2 border-green-300 w-1/4 h-auto p-4"> */}
-                <Link to="/events/cadpro/form" className=" flex-row h-full   sm:text-lg text-sm text-left   lg:py-[25px] lg:pr-[150px] ">
-                  <GradientText
-                    colors={[
-                      "#40ffaa",
-                      "#4079ff",
-                      "#40ffaa",
-                      "#4079ff",
-                      "#40ffaa",
-                    ]}
-                    animationSpeed={10}
-                    showBorder={false}
-                    className=""
-                  >
-                    <div className=" flex-col justify-start h-full w-full pl-2 ">
-                      Register Here
-                    </div>
-                  </GradientText>
-                </Link>
-                {/* </div> */}
-              </div>
-            </li>
+            
             {/* <li>
               <Link to={"/events/civiera"}>
                 <div className="p-4 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg grid grid-cols-2 items-center">
@@ -163,6 +134,34 @@ export default function Events() {
             <li>
               <div className=" hover:bg-gray-50 cursor-pointer text-sm sm:text-lg  flex   items-center">
                 <Link
+                  to={"/events/cadpro"}
+                  className=" w-3/4 sm:text-lg  max-sm:pl-0 text-sm justify-self-start border-r-2 border-gray-300"
+                >
+                  <div className="p-6 max-sm:pl-0"> Designing </div>
+                </Link>
+                <Link to="/events/cadpro/form" className=" flex-row h-full   sm:text-lg text-sm text-left   lg:py-[25px] lg:pr-[150px] ">
+                  <GradientText
+                    colors={[
+                      "#40ffaa",
+                      "#4079ff",
+                      "#40ffaa",
+                      "#4079ff",
+                      "#40ffaa",
+                    ]}
+                    animationSpeed={10}
+                    showBorder={false}
+                    className=""
+                  >
+                    <div className=" flex-col justify-start h-full w-full pl-2 ">
+                      Register Here
+                    </div>
+                  </GradientText>
+                </Link>
+              </div>
+            </li>
+            <li>
+              <div className=" hover:bg-gray-50 cursor-pointer text-sm sm:text-lg  flex   items-center">
+                <Link
                   to={"/events/gogate"}
                   className=" w-3/4 sm:text-lg text-sm justify-self-start border-r-2 border-gray-300"
                 >
@@ -196,23 +195,23 @@ export default function Events() {
                 {/* </div> */}
               </div>
             </li>
-            <li>
+            {/* <li>
               <Link to={"/events/intervista"}>
                 <div className="p-6 max-sm:pl-0 hover:bg-gray-50 cursor-pointer text-sm sm:text-lg grid grid-cols-2 items-center">
                   <div className="sm:text-lg text-sm justify-self-start">
                     Invervista
                   </div>
-                  {/* <GradientText
+                  <GradientText
                     colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                     animationSpeed={10}
                     showBorder={false}
                     className="custom-class sm:text-lg text-sm justify-self-end"
                   >
                     Register Here
-                  </GradientText> */}
+                  </GradientText>
                 </div>
               </Link>
-            </li>
+            </li> */}
             <li>
               <div className=" hover:bg-gray-50 cursor-pointer text-sm sm:text-lg  flex   items-center">
                 <Link
@@ -227,6 +226,39 @@ export default function Events() {
 
 
 
+                  <GradientText
+                    colors={[
+                      "#40ffaa",
+                      "#4079ff",
+                      "#40ffaa",
+                      "#4079ff",
+                      "#40ffaa",
+                    ]}
+                    animationSpeed={10}
+                    showBorder={false}
+                    className=""
+                  >
+                    <div className=" flex-col justify-start h-full w-full pl-2 ">
+
+                      Register Here
+                    </div>
+
+                  </GradientText>
+                </Link>
+                {/* </div> */}
+              </div>
+            </li>
+            <li>
+              <div className=" hover:bg-gray-50 cursor-pointer text-sm sm:text-lg  flex   items-center">
+                <Link
+                  to={"/events/opinion-olympics"}
+                  className="  w-3/4 sm:text-lg text-sm justify-self-start border-r-2 border-gray-300"
+                >
+                  <div className="p-6 max-sm:pl-0">Opinion Olympics</div>
+                </Link>
+
+                {/* <div onClick={() => navigate('build-em-all/form')} className="border-2 border-green-300 w-1/4 h-auto p-4"> */}
+                <Link to="/events/opinion-olympics/form" className=" flex-row h-full   sm:text-lg text-sm text-left   lg:py-[25px] lg:pr-[150px] ">
                   <GradientText
                     colors={[
                       "#40ffaa",
