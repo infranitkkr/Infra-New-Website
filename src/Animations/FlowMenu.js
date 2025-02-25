@@ -41,8 +41,11 @@ function MenuItem({ text, image, link }) {
         <div className="h-full w-[200%] flex items-center whitespace-nowrap" ref={marqueeRef}>
           {[...Array(6)].map((_, idx) => (
             <React.Fragment key={idx}>
-              <span className="text-black uppercase font-semibold text-base sm:text-xl leading-[1.2] px-4 bg-white rounded-full">
+              <span className="text-black uppercase font-semibold text-base sm:text-xl leading-[1.2] px-4 mx-5 bg-white rounded-full">
                 {text}
+              </span>
+              <span className="text-black uppercase font-semibold text-base sm:text-xl leading-[1.2] px-4 mx-6 bg-white rounded-full">
+                Click Here
               </span>
               <div
                 className="w-[200px] h-[7vh] mx-4 rounded-[50px] bg-cover bg-center"
